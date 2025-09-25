@@ -1,0 +1,822 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0EB7E0125E7CB669EDA43E4B /* Pods_ATMSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1BC7B40FDA163964E4A15E /* Pods_ATMSwift.framework */; };
+		2E1E5DDF2E8025B300199191 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E1E5DD72E8025B300199191 /* Assets.xcassets */; };
+		2E1E5DE12E8025B300199191 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1E5DDA2E8025B300199191 /* LaunchScreen.storyboard */; };
+		2E1E5DE22E8025B300199191 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1E5DDC2E8025B300199191 /* Main.storyboard */; };
+		2E1E5DE32E8025B300199191 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E5DD62E8025B300199191 /* AppDelegate.swift */; };
+		2E1E5DE92E80280A00199191 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E5DE82E80280A00199191 /* CustomTabBarController.swift */; };
+		2E1E5DEB2E80289000199191 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E5DEA2E80289000199191 /* BaseViewController.swift */; };
+		2E1E5DED2E80294A00199191 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E5DEC2E80294A00199191 /* CustomNavigationController.swift */; };
+		2E1E5DF02E802A3000199191 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E5DEF2E802A3000199191 /* HomeViewController.swift */; };
+		2E1E5DF32E802A7B00199191 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E5DF22E802A7B00199191 /* OrderViewController.swift */; };
+		2E1E5DF62E802A9700199191 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E5DF52E802A9700199191 /* MineViewController.swift */; };
+		2E1E606E2E802C0100199191 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E606D2E802C0100199191 /* CustomTabBar.swift */; };
+		2E1E60732E8030F100199191 /* ColorMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E60702E8030F100199191 /* ColorMacros.swift */; };
+		2E1E60742E8030F100199191 /* DimensMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E60712E8030F100199191 /* DimensMacros.swift */; };
+		2E1E60752E8030F100199191 /* importPod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E60722E8030F100199191 /* importPod.swift */; };
+		2E1E607B2E80316600199191 /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E607A2E80316600199191 /* UIColor+Category.m */; };
+		2E1E607C2E80316600199191 /* UILabel+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E60772E80316600199191 /* UILabel+Category.swift */; };
+		2E1E607D2E80316600199191 /* UIView+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E60782E80316600199191 /* UIView+Category.swift */; };
+		2E1E60822E80EA0900199191 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E60812E80EA0900199191 /* HomeTableViewCell.swift */; };
+		2E1E60842E80EA9200199191 /* HomeHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E60832E80EA9200199191 /* HomeHeadView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E1E5DB52E801B0500199191 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E1E5D962E801B0300199191 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E1E5D9D2E801B0300199191;
+			remoteInfo = ATMSwift;
+		};
+		2E1E5DBF2E801B0500199191 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E1E5D962E801B0300199191 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E1E5D9D2E801B0300199191;
+			remoteInfo = ATMSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02663B1208C010229416D78A /* Pods-ATMSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATMSwift.release.xcconfig"; path = "Target Support Files/Pods-ATMSwift/Pods-ATMSwift.release.xcconfig"; sourceTree = "<group>"; };
+		0C1BC7B40FDA163964E4A15E /* Pods_ATMSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATMSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E1E5D9E2E801B0300199191 /* ATMSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATMSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E1E5DB42E801B0500199191 /* ATMSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ATMSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E1E5DBE2E801B0500199191 /* ATMSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ATMSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E1E5DD62E8025B300199191 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2E1E5DD72E8025B300199191 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E1E5DD82E8025B300199191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E1E5DD92E8025B300199191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2E1E5DDB2E8025B300199191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E1E5DE82E80280A00199191 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		2E1E5DEA2E80289000199191 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2E1E5DEC2E80294A00199191 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		2E1E5DEF2E802A3000199191 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2E1E5DF22E802A7B00199191 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		2E1E5DF52E802A9700199191 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		2E1E606D2E802C0100199191 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		2E1E60702E8030F100199191 /* ColorMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMacros.swift; sourceTree = "<group>"; };
+		2E1E60712E8030F100199191 /* DimensMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimensMacros.swift; sourceTree = "<group>"; };
+		2E1E60722E8030F100199191 /* importPod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = importPod.swift; sourceTree = "<group>"; };
+		2E1E60772E80316600199191 /* UILabel+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Category.swift"; sourceTree = "<group>"; };
+		2E1E60782E80316600199191 /* UIView+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Category.swift"; sourceTree = "<group>"; };
+		2E1E60792E80316600199191 /* UIColor+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; };
+		2E1E607A2E80316600199191 /* UIColor+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Category.m"; sourceTree = "<group>"; };
+		2E1E607E2E80316700199191 /* ATMSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ATMSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		2E1E60812E80EA0900199191 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		2E1E60832E80EA9200199191 /* HomeHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeadView.swift; sourceTree = "<group>"; };
+		744CF1E1497B8931DA23F074 /* Pods-ATMSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATMSwift.debug.xcconfig"; path = "Target Support Files/Pods-ATMSwift/Pods-ATMSwift.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		2E1E5DB72E801B0500199191 /* ATMSwiftTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ATMSwiftTests;
+			sourceTree = "<group>";
+		};
+		2E1E5DC12E801B0500199191 /* ATMSwiftUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ATMSwiftUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E1E5D9B2E801B0300199191 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EB7E0125E7CB669EDA43E4B /* Pods_ATMSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E1E5DB12E801B0500199191 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E1E5DBB2E801B0500199191 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27080E08AF8F9437ED1A6894 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C1BC7B40FDA163964E4A15E /* Pods_ATMSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2E1E5D952E801B0300199191 = {
+			isa = PBXGroup;
+			children = (
+				2E1E5DDE2E8025B300199191 /* ATMSwift */,
+				2E1E5DB72E801B0500199191 /* ATMSwiftTests */,
+				2E1E5DC12E801B0500199191 /* ATMSwiftUITests */,
+				2E1E5D9F2E801B0300199191 /* Products */,
+				3D50BED0EC19D85F39939356 /* Pods */,
+				27080E08AF8F9437ED1A6894 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2E1E5D9F2E801B0300199191 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E1E5D9E2E801B0300199191 /* ATMSwift.app */,
+				2E1E5DB42E801B0500199191 /* ATMSwiftTests.xctest */,
+				2E1E5DBE2E801B0500199191 /* ATMSwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E1E5DD42E8025B300199191 /* Common(公共资源) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Common(公共资源)";
+			sourceTree = "<group>";
+		};
+		2E1E5DD52E8025B300199191 /* Modules(功能模块) */ = {
+			isa = PBXGroup;
+			children = (
+				2E1E5DF42E802A8A00199191 /* Mine */,
+				2E1E5DF12E802A6200199191 /* Order */,
+				2E1E5DEE2E802A0700199191 /* Home */,
+			);
+			path = "Modules(功能模块)";
+			sourceTree = "<group>";
+		};
+		2E1E5DDE2E8025B300199191 /* ATMSwift */ = {
+			isa = PBXGroup;
+			children = (
+				2E1E607E2E80316700199191 /* ATMSwift-Bridging-Header.h */,
+				2E1E60762E80314E00199191 /* Category */,
+				2E1E606F2E8030DC00199191 /* SupportingFile */,
+				2E1E5DE72E80264500199191 /* Base */,
+				2E1E5DE62E80262500199191 /* Application */,
+				2E1E5DE52E8025BA00199191 /* Resources(资源文件) */,
+				2E1E5DD42E8025B300199191 /* Common(公共资源) */,
+				2E1E5DD52E8025B300199191 /* Modules(功能模块) */,
+				2E1E5DD72E8025B300199191 /* Assets.xcassets */,
+				2E1E5DD82E8025B300199191 /* Info.plist */,
+				2E1E5DDA2E8025B300199191 /* LaunchScreen.storyboard */,
+				2E1E5DDC2E8025B300199191 /* Main.storyboard */,
+			);
+			path = ATMSwift;
+			sourceTree = "<group>";
+		};
+		2E1E5DE52E8025BA00199191 /* Resources(资源文件) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Resources(资源文件)";
+			sourceTree = "<group>";
+		};
+		2E1E5DE62E80262500199191 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				2E1E5DD62E8025B300199191 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		2E1E5DE72E80264500199191 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2E1E5DE82E80280A00199191 /* CustomTabBarController.swift */,
+				2E1E5DEA2E80289000199191 /* BaseViewController.swift */,
+				2E1E5DEC2E80294A00199191 /* CustomNavigationController.swift */,
+				2E1E606D2E802C0100199191 /* CustomTabBar.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2E1E5DEE2E802A0700199191 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2E1E5DEF2E802A3000199191 /* HomeViewController.swift */,
+				2E1E60812E80EA0900199191 /* HomeTableViewCell.swift */,
+				2E1E60832E80EA9200199191 /* HomeHeadView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2E1E5DF12E802A6200199191 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				2E1E5DF22E802A7B00199191 /* OrderViewController.swift */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		2E1E5DF42E802A8A00199191 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				2E1E5DF52E802A9700199191 /* MineViewController.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		2E1E606F2E8030DC00199191 /* SupportingFile */ = {
+			isa = PBXGroup;
+			children = (
+				2E1E60702E8030F100199191 /* ColorMacros.swift */,
+				2E1E60712E8030F100199191 /* DimensMacros.swift */,
+				2E1E60722E8030F100199191 /* importPod.swift */,
+			);
+			path = SupportingFile;
+			sourceTree = "<group>";
+		};
+		2E1E60762E80314E00199191 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				2E1E60772E80316600199191 /* UILabel+Category.swift */,
+				2E1E60782E80316600199191 /* UIView+Category.swift */,
+				2E1E60792E80316600199191 /* UIColor+Category.h */,
+				2E1E607A2E80316600199191 /* UIColor+Category.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		3D50BED0EC19D85F39939356 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				744CF1E1497B8931DA23F074 /* Pods-ATMSwift.debug.xcconfig */,
+				02663B1208C010229416D78A /* Pods-ATMSwift.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E1E5D9D2E801B0300199191 /* ATMSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E1E5DC72E801B0500199191 /* Build configuration list for PBXNativeTarget "ATMSwift" */;
+			buildPhases = (
+				0B9BBAF36DA2FB655154DC3E /* [CP] Check Pods Manifest.lock */,
+				2E1E5D9A2E801B0300199191 /* Sources */,
+				2E1E5D9B2E801B0300199191 /* Frameworks */,
+				2E1E5D9C2E801B0300199191 /* Resources */,
+				B9AABD1DB8B6DE5808F62CF3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ATMSwift;
+			productName = ATMSwift;
+			productReference = 2E1E5D9E2E801B0300199191 /* ATMSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2E1E5DB32E801B0500199191 /* ATMSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E1E5DCC2E801B0500199191 /* Build configuration list for PBXNativeTarget "ATMSwiftTests" */;
+			buildPhases = (
+				2E1E5DB02E801B0500199191 /* Sources */,
+				2E1E5DB12E801B0500199191 /* Frameworks */,
+				2E1E5DB22E801B0500199191 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E1E5DB62E801B0500199191 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				2E1E5DB72E801B0500199191 /* ATMSwiftTests */,
+			);
+			name = ATMSwiftTests;
+			productName = ATMSwiftTests;
+			productReference = 2E1E5DB42E801B0500199191 /* ATMSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2E1E5DBD2E801B0500199191 /* ATMSwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E1E5DCF2E801B0500199191 /* Build configuration list for PBXNativeTarget "ATMSwiftUITests" */;
+			buildPhases = (
+				2E1E5DBA2E801B0500199191 /* Sources */,
+				2E1E5DBB2E801B0500199191 /* Frameworks */,
+				2E1E5DBC2E801B0500199191 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E1E5DC02E801B0500199191 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				2E1E5DC12E801B0500199191 /* ATMSwiftUITests */,
+			);
+			name = ATMSwiftUITests;
+			productName = ATMSwiftUITests;
+			productReference = 2E1E5DBE2E801B0500199191 /* ATMSwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E1E5D962E801B0300199191 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					2E1E5D9D2E801B0300199191 = {
+						CreatedOnToolsVersion = 16.3;
+						LastSwiftMigration = 1630;
+					};
+					2E1E5DB32E801B0500199191 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 2E1E5D9D2E801B0300199191;
+					};
+					2E1E5DBD2E801B0500199191 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 2E1E5D9D2E801B0300199191;
+					};
+				};
+			};
+			buildConfigurationList = 2E1E5D992E801B0300199191 /* Build configuration list for PBXProject "ATMSwift" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E1E5D952E801B0300199191;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 2E1E5D9F2E801B0300199191 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E1E5D9D2E801B0300199191 /* ATMSwift */,
+				2E1E5DB32E801B0500199191 /* ATMSwiftTests */,
+				2E1E5DBD2E801B0500199191 /* ATMSwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E1E5D9C2E801B0300199191 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E1E5DDF2E8025B300199191 /* Assets.xcassets in Resources */,
+				2E1E5DE12E8025B300199191 /* LaunchScreen.storyboard in Resources */,
+				2E1E5DE22E8025B300199191 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E1E5DB22E801B0500199191 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E1E5DBC2E801B0500199191 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B9BBAF36DA2FB655154DC3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ATMSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9AABD1DB8B6DE5808F62CF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ATMSwift/Pods-ATMSwift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ATMSwift/Pods-ATMSwift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ATMSwift/Pods-ATMSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E1E5D9A2E801B0300199191 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E1E5DE32E8025B300199191 /* AppDelegate.swift in Sources */,
+				2E1E607B2E80316600199191 /* UIColor+Category.m in Sources */,
+				2E1E607C2E80316600199191 /* UILabel+Category.swift in Sources */,
+				2E1E60842E80EA9200199191 /* HomeHeadView.swift in Sources */,
+				2E1E607D2E80316600199191 /* UIView+Category.swift in Sources */,
+				2E1E5DED2E80294A00199191 /* CustomNavigationController.swift in Sources */,
+				2E1E5DEB2E80289000199191 /* BaseViewController.swift in Sources */,
+				2E1E60822E80EA0900199191 /* HomeTableViewCell.swift in Sources */,
+				2E1E60732E8030F100199191 /* ColorMacros.swift in Sources */,
+				2E1E60742E8030F100199191 /* DimensMacros.swift in Sources */,
+				2E1E60752E8030F100199191 /* importPod.swift in Sources */,
+				2E1E5DF62E802A9700199191 /* MineViewController.swift in Sources */,
+				2E1E606E2E802C0100199191 /* CustomTabBar.swift in Sources */,
+				2E1E5DF32E802A7B00199191 /* OrderViewController.swift in Sources */,
+				2E1E5DE92E80280A00199191 /* CustomTabBarController.swift in Sources */,
+				2E1E5DF02E802A3000199191 /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E1E5DB02E801B0500199191 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E1E5DBA2E801B0500199191 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E1E5DB62E801B0500199191 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E1E5D9D2E801B0300199191 /* ATMSwift */;
+			targetProxy = 2E1E5DB52E801B0500199191 /* PBXContainerItemProxy */;
+		};
+		2E1E5DC02E801B0500199191 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E1E5D9D2E801B0300199191 /* ATMSwift */;
+			targetProxy = 2E1E5DBF2E801B0500199191 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2E1E5DDA2E8025B300199191 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E1E5DD92E8025B300199191 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2E1E5DDC2E8025B300199191 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E1E5DDB2E8025B300199191 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E1E5DC82E801B0500199191 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 744CF1E1497B8931DA23F074 /* Pods-ATMSwift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 469YBH893T;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ATMSwift/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binbin.ATMSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ATMSwift/Category/ATMSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E1E5DC92E801B0500199191 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02663B1208C010229416D78A /* Pods-ATMSwift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 469YBH893T;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ATMSwift/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binbin.ATMSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ATMSwift/Category/ATMSwift-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2E1E5DCA2E801B0500199191 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 469YBH893T;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2E1E5DCB2E801B0500199191 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 469YBH893T;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E1E5DCD2E801B0500199191 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 469YBH893T;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binbin.ATMSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ATMSwift.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ATMSwift";
+			};
+			name = Debug;
+		};
+		2E1E5DCE2E801B0500199191 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 469YBH893T;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binbin.ATMSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ATMSwift.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ATMSwift";
+			};
+			name = Release;
+		};
+		2E1E5DD02E801B0500199191 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 469YBH893T;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binbin.ATMSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ATMSwift;
+			};
+			name = Debug;
+		};
+		2E1E5DD12E801B0500199191 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 469YBH893T;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.binbin.ATMSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ATMSwift;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E1E5D992E801B0300199191 /* Build configuration list for PBXProject "ATMSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E1E5DCA2E801B0500199191 /* Debug */,
+				2E1E5DCB2E801B0500199191 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E1E5DC72E801B0500199191 /* Build configuration list for PBXNativeTarget "ATMSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E1E5DC82E801B0500199191 /* Debug */,
+				2E1E5DC92E801B0500199191 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E1E5DCC2E801B0500199191 /* Build configuration list for PBXNativeTarget "ATMSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E1E5DCD2E801B0500199191 /* Debug */,
+				2E1E5DCE2E801B0500199191 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E1E5DCF2E801B0500199191 /* Build configuration list for PBXNativeTarget "ATMSwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E1E5DD02E801B0500199191 /* Debug */,
+				2E1E5DD12E801B0500199191 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E1E5D962E801B0300199191 /* Project object */;
+}
