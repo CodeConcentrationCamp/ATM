@@ -18,9 +18,16 @@ class BaseViewController: UIViewController {
     func initBackButton(){
         if let navigationController = self.navigationController,
            navigationController.viewControllers.count > 1 {
-            let backButton = UIBarButtonItem(image: UIImage(named: "icon_nav_blackBack"), style: .plain, target: self, action: #selector(backClick))
-            backButton.tintColor = .black
-            self.navigationItem.leftBarButtonItem = backButton
+            
+            let btn = UIButton(type: .custom)
+            btn.frame = CGRect(x: 10, y: 0, width: 100, height: 40)
+            btn.contentHorizontalAlignment = .left
+            btn.isUserInteractionEnabled = true
+            btn .setImage(UIImage(named: "return_ic"), for: .normal)
+            btn .setImage(UIImage(named: "return_ic"), for: .highlighted)
+            btn.addTarget(self, action:  #selector(backClick), for: .touchUpInside)
+            let barItem = UIBarButtonItem(customView: btn)
+            self.navigationItem.leftBarButtonItem = barItem
         }
     }
     

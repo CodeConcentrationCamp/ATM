@@ -4,3 +4,6 @@
 
 /** 颜色分类 */
 #import "UIColor+Category.h"
+#import "ReplyView.h"
+#import "ReplyCollectionViewCell.h"
+#import "ShowTip.h"

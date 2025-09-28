@@ -19,7 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.backgroundColor = Default_BackGround_Color!
         self.window?.frame = UIScreen.main.bounds
         self.window?.makeKeyAndVisible()
-        self.window?.rootViewController = CustomTabBarController()
+        PageRouter.changeHomeOrLoginPage()
+        
+        
+        
         
         return true
     }
@@ -28,4 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
+
+
 

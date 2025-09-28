@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+
 extension UIView{
     
     var x:CGFloat{
@@ -226,5 +227,43 @@ extension UIViewController {
             responder = responder?.next
         }
         return nil
+    }
+}
+
+
+extension UIButton{
+    enum ButtonImagePosition {
+        case top, bottom, left, right
+    }
+
+    func setImagePosition(_ position: ButtonImagePosition, spacing: CGFloat) {
+        // 计算图片和文字的尺寸
+        let imageWidth = imageView?.frame.width ?? 0
+        let imageHeight = imageView?.frame.height ?? 0
+        let labelWidth = titleLabel?.intrinsicContentSize.width ?? 0
+        let labelHeight = titleLabel?.intrinsicContentSize.height ?? 0
+
+        var imageInsets = UIEdgeInsets.zero
+        var titleInsets = UIEdgeInsets.zero
+
+        switch position {
+        case .top:
+            imageInsets = UIEdgeInsets(top: -labelHeight-spacing/2, left: 0, bottom: 0, right: -labelWidth)
+            titleInsets = UIEdgeInsets(top: 0, left: -imageWidth, bottom: -imageHeight-spacing/2, right: 0)
+            break
+        case .bottom:
+            imageInsets = UIEdgeInsets(top: -labelHeight-spacing/2, left: 0, bottom: 0, right: -labelWidth)
+            titleInsets = UIEdgeInsets(top: 0, left: -imageWidth, bottom: -imageHeight-spacing/2, right: 0)
+        case .left:
+            imageInsets = UIEdgeInsets(top: -labelHeight-spacing/2, left: 0, bottom: 0, right: -labelWidth)
+            titleInsets = UIEdgeInsets(top: 0, left: -imageWidth, bottom: -imageHeight-spacing/2, right: 0)
+            break
+        case .right:
+            imageInsets = UIEdgeInsets(top: -labelHeight-spacing/2, left: 0, bottom: 0, right: -labelWidth)
+            titleInsets = UIEdgeInsets(top: 0, left: -imageWidth, bottom: -imageHeight-spacing/2, right: 0)
+            break
+        }
+        imageEdgeInsets = imageInsets
+        titleEdgeInsets = titleInsets
     }
 }

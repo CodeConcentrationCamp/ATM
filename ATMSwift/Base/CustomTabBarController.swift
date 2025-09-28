@@ -52,7 +52,6 @@ extension CustomTabBarController{
     
     func setUpTabBar(){
         for tabBarModel in aItemArray {
-//            tabBarModel.viewController?.tabBarItem.title = ""
             tabBarModel.viewController?.tabBarItem.image = UIImage.init(named:tabBarModel.infoImage! as String)?.withRenderingMode(.alwaysOriginal)
             tabBarModel.viewController?.tabBarItem.selectedImage = UIImage(named: tabBarModel.infoSelectImage! as String)?.withRenderingMode(.alwaysOriginal)
             let nav = CustomNavigationController(rootViewController: tabBarModel.viewController!)

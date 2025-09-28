@@ -18,25 +18,23 @@ class CustomNavigationController: UINavigationController {
 
     extension CustomNavigationController{
         func setUpNavBarItemAppearance(){
-            if #available(iOS 13.0, *) {
+            
+            if #available(iOS 15.0, *) {
              let appearance = UINavigationBarAppearance()
-                appearance.backgroundColor = .white
+                appearance.configureWithOpaqueBackground()
+                appearance.backgroundColor = Default_BackGround_Color!
                 appearance.shadowColor = .clear
                 appearance.titleTextAttributes = [.font:UIFont.systemFont(ofSize: 18, weight: .bold),.foregroundColor:UIColor.black]
                 self.navigationBar.standardAppearance = appearance
-               // if #available(iOS 13.0, *) {
-                    self.navigationBar.scrollEdgeAppearance = appearance
-                //}
+                self.navigationBar.scrollEdgeAppearance = appearance
+                
             }else{
                 self.navigationBar.barTintColor = .white;
-            self.navigationBar.titleTextAttributes =  [.font:UIFont.systemFont(ofSize: 18, weight: .bold),.foregroundColor:UIColor.black];
+                self.navigationBar.titleTextAttributes =  [.font:UIFont.systemFont(ofSize: 18, weight: .bold),.foregroundColor:UIColor.black];
                 self.navigationBar.shadowImage = imageWithColor(color: .clear)
-                self.navigationBar.setBackgroundImage( imageWithColor(color: .white), for: .default)
-        }
-        // 不透明
-        self.navigationBar.isTranslucent = false;
-        // navigation控件颜色
-            self.navigationBar.tintColor = .black;
+                self.navigationBar.setBackgroundImage( imageWithColor(color: Default_BackGround_Color!), for: .default)
+            }
+        
         }
         
         func imageWithColor(color:UIColor) -> UIImage
@@ -59,5 +57,7 @@ class CustomNavigationController: UINavigationController {
             }
             super.pushViewController(viewController, animated: animated)
         }
+        
+  
 
     }
