@@ -16,6 +16,16 @@ class HomeViewController: BaseViewController ,UITableViewDelegate,UITableViewDat
     
     lazy var headView: HomeHeadView = {
         let headView = HomeHeadView(frame: CGRect(x: 0, y: 0, width: KScreenWidth, height: 450))
+        headView.buttonAction = {
+            self.viewModel.clickApply(proID: self.viewModel.homeModel?.glow?.filaments?.first?.later!)
+            self.viewModel.upClickDataBlock = {
+                [self] patent in
+                BBAllLog("当前的请求跳转URL:\(patent)")
+                if patent.isEmpty == false{
+                    PageRouter.schemeType(patent, vc: self)
+                }
+            }
+        }
         return headView
     }()
     
@@ -39,9 +49,14 @@ class HomeViewController: BaseViewController ,UITableViewDelegate,UITableViewDat
         return mainTableView
     }()
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = true
         
         self.tableView.tableHeaderView = self.headView
         self.view .addSubview(self.tableView)

@@ -270,4 +270,102 @@ typedef NS_ENUM(NSInteger,BallMoveDirection){
     return cos(angle);
 }
 
++ (NSData *)resetSizeOfImageData:(UIImage *)sourceImage maxSize:(NSInteger)maxSizeKB {
+    
+    __block NSData *finallImageData = UIImageJPEGRepresentation(sourceImage,1.0);
+    NSUInteger sizeOrigin   = finallImageData.length;
+    NSUInteger sizeOriginKB = sizeOrigin / 1000;
+    if (sizeOriginKB <= maxSizeKB) {
+        return finallImageData;
+    }
+    CGFloat sourceImageAspectRatio = sourceImage.size.width/sourceImage.size.height;
+    CGSize defaultSize = CGSizeMake(1024, 1024/sourceImageAspectRatio);
+    UIImage *newImage = [self newSizeImage:defaultSize image:sourceImage];
+    finallImageData = UIImageJPEGRepresentation(newImage,1.0);
+    NSMutableArray *compressionQualityArr = [NSMutableArray array];
+    CGFloat avg   = 1.0/250;
+    CGFloat value = avg;
+    for (int i = 250; i >= 1; i--) {
+        value = i*avg;
+        [compressionQualityArr addObject:@(value)];
+    }
+    
+    finallImageData = [self halfFuntion:compressionQualityArr image:newImage sourceData:finallImageData maxSize:maxSizeKB];
+    while (finallImageData.length == 0) {
+        CGFloat reduceWidth = 100.0;
+        CGFloat reduceHeight = 100.0/sourceImageAspectRatio;
+        if (defaultSize.width-reduceWidth <= 0 || defaultSize.height-reduceHeight <= 0) {
+            break;
+        }
+        defaultSize = CGSizeMake(defaultSize.width-reduceWidth, defaultSize.height-reduceHeight);
+        UIImage *image = [self newSizeImage:defaultSize
+                                      image:[UIImage imageWithData:UIImageJPEGRepresentation(newImage,[[compressionQualityArr lastObject] floatValue])]];
+        finallImageData = [self halfFuntion:compressionQualityArr image:image sourceData:UIImageJPEGRepresentation(image,1.0) maxSize:maxSizeKB];
+    }
+    return finallImageData;
+    
+}
+
++ (UIImage *)newSizeImage:(CGSize)targetSize image:(UIImage *)sourceImage {
+    
+    CGFloat souceImageW = sourceImage.size.width;
+    CGFloat souceImageH = sourceImage.size.height;
+    if (souceImageH == 0 || souceImageW == 0) {
+        return sourceImage;
+    }
+    BOOL isBiggerH = souceImageH > souceImageW;
+    
+    CGFloat targetW = isBiggerH ? MIN(targetSize.width, targetSize.height) : MAX(targetSize.width, targetSize.height);
+    CGFloat targetH = isBiggerH ? MAX(targetSize.width, targetSize.height) : MIN(targetSize.width, targetSize.height);
+    
+    CGFloat coefficientW = targetW * 1.0 / souceImageW;
+    CGFloat coefficientH = targetH * 1.0 / souceImageH ;
+    CGFloat finalCoefficient = MIN(coefficientW, coefficientH);
+    if (finalCoefficient > 1) {
+        return sourceImage;
+    }else{
+        CGPoint thumbnailPoint =CGPointMake(0.0,0.0);
+        UIGraphicsBeginImageContext(CGSizeMake(MIN(finalCoefficient * souceImageW, targetW), MIN(finalCoefficient * souceImageH, targetH)));
+        CGRect thumbnailRect =CGRectZero;
+        thumbnailRect.origin= thumbnailPoint;
+        thumbnailRect.size.width= souceImageW * finalCoefficient;
+        thumbnailRect.size.height= souceImageH * finalCoefficient;
+        [sourceImage drawInRect:thumbnailRect];
+        UIImage*newImage =UIGraphicsGetImageFromCurrentImageContext();
+        return newImage;
+    }
+}
+
++ (NSData *)halfFuntion:(NSArray *)arr image:(UIImage *)image sourceData:(NSData *)finallImageData maxSize:(NSInteger)maxSize {
+    NSData *tempData = [NSData data];
+    NSUInteger start = 0;
+    NSUInteger end = arr.count - 1;
+    NSUInteger index = 0;
+    
+    NSUInteger difference = NSIntegerMax;
+    while(start <= end) {
+        index = start + (end - start)/2;
+        finallImageData = UIImageJPEGRepresentation(image,[arr[index] floatValue]);
+        NSUInteger sizeOrigin = finallImageData.length;
+        NSUInteger sizeOriginKB = sizeOrigin / 1024;
+        if (sizeOriginKB > maxSize) {
+            start = index + 1;
+        } else if (sizeOriginKB < maxSize) {
+            if (maxSize-sizeOriginKB < difference) {
+                difference = maxSize-sizeOriginKB;
+                tempData = finallImageData;
+            }
+            if (index<=0) {
+                break;
+            }
+            end = index - 1;
+        } else {
+            break;
+        }
+    }
+    return tempData;
+}
+
+
+
 @end

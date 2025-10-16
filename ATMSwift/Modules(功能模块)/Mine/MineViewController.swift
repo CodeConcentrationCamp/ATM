@@ -42,6 +42,16 @@ extension MineViewController:MineHeadViewDelegate{
         if tag == 102{
             let vc = SetUpViewController()
             self.navigationController?.pushViewController(vc, animated: true)
+            return
         }
+        
+        if tag == 100{
+            ToolManager.shared.jumpWebWithUrl(url: "http://8.212.166.255:8097/batVanillaS")
+        }
+        
+        if tag == 101{
+            ToolManager.shared.jumpWebWithUrl(url: "http://8.212.166.255:8097/eggplantDan")
+        }
+        
     }
 }

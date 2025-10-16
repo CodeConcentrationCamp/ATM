@@ -51,6 +51,36 @@
 		2E76A2542E88189800FB1E2D /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A2532E88189800FB1E2D /* OrderTableViewCell.swift */; };
 		2E76A2562E881EF600FB1E2D /* StandingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A2552E881EF600FB1E2D /* StandingModel.swift */; };
 		2E76A2582E881FD700FB1E2D /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A2572E881FD700FB1E2D /* OrderViewModel.swift */; };
+		2E76A2EF2E88E69300FB1E2D /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A2EE2E88E69300FB1E2D /* ProductDetailViewController.swift */; };
+		2E76A2F22E891B7000FB1E2D /* ProductDetailHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A2F12E891B7000FB1E2D /* ProductDetailHeadView.swift */; };
+		2E76A2F42E89602100FB1E2D /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A2F32E89602100FB1E2D /* ProductCell.swift */; };
+		2E76A2F62E89621600FB1E2D /* ProductHeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A2F52E89621600FB1E2D /* ProductHeaderSectionView.swift */; };
+		2E76A2F92E89658D00FB1E2D /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A2F82E89658D00FB1E2D /* ProductModel.swift */; };
+		2E76A2FC2E8966BC00FB1E2D /* ProductModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A2FB2E8966BC00FB1E2D /* ProductModelView.swift */; };
+		2E76A2FE2E896E4D00FB1E2D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A2FD2E896E4D00FB1E2D /* Router.swift */; };
+		2E76A3062E8A334D00FB1E2D /* WebPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A3052E8A334D00FB1E2D /* WebPageViewController.swift */; };
+		2E76A3082E8AA5BE00FB1E2D /* Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A3072E8AA5BE00FB1E2D /* Gesture.swift */; };
+		2E76A30B2E8B71E100FB1E2D /* KYCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A30A2E8B71E100FB1E2D /* KYCViewController.swift */; };
+		2E76A30D2E8B71EF00FB1E2D /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A30C2E8B71EF00FB1E2D /* FaceViewController.swift */; };
+		2E76A30F2E8B720200FB1E2D /* VerifyIDFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A30E2E8B720200FB1E2D /* VerifyIDFinishViewController.swift */; };
+		2E76A3112E8B721200FB1E2D /* PerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A3102E8B721200FB1E2D /* PerInfoViewController.swift */; };
+		2E76A3132E8B722000FB1E2D /* WorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A3122E8B722000FB1E2D /* WorkViewController.swift */; };
+		2E76A3152E8B722E00FB1E2D /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A3142E8B722E00FB1E2D /* ContactViewController.swift */; };
+		2E76A3172E8B724000FB1E2D /* BankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A3162E8B724000FB1E2D /* BankViewController.swift */; };
+		2E76A31A2E8B7AFE00FB1E2D /* VerIDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A3192E8B7AFE00FB1E2D /* VerIDModel.swift */; };
+		2E76A31D2E8B7BFA00FB1E2D /* RZViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A31C2E8B7BFA00FB1E2D /* RZViewModel.swift */; };
+		2E76A3222E8EAAFA00FB1E2D /* NextStepButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A3212E8EAAFA00FB1E2D /* NextStepButton.swift */; };
+		2E76A3242E9D031500FB1E2D /* VerIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A3232E9D031500FB1E2D /* VerIDViewController.swift */; };
+		2E76A3282E9D0E0400FB1E2D /* KYCCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A3272E9D0E0400FB1E2D /* KYCCellView.swift */; };
+		2E76A32A2E9DE49600FB1E2D /* KYCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A3292E9DE49600FB1E2D /* KYCView.swift */; };
+		2E76A32C2E9DF8A100FB1E2D /* RZStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A32B2E9DF8A100FB1E2D /* RZStepView.swift */; };
+		2E76A32E2E9E47FE00FB1E2D /* TopItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A32D2E9E47FE00FB1E2D /* TopItemView.swift */; };
+		2E76A3302E9E4F3F00FB1E2D /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A32F2E9E4F3F00FB1E2D /* CustomAlertView.swift */; };
+		2E76A3322E9F850900FB1E2D /* PopupAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A3312E9F850900FB1E2D /* PopupAnimator.swift */; };
+		2E76A3342E9F894400FB1E2D /* PhoneBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A3332E9F894400FB1E2D /* PhoneBoxView.swift */; };
+		2E76A3382E9F99D500FB1E2D /* PhotoLibraryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A3372E9F99D500FB1E2D /* PhotoLibraryManager.swift */; };
+		2E76A33A2E9FE94500FB1E2D /* IDCardFinishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A3392E9FE94500FB1E2D /* IDCardFinishView.swift */; };
+		2E76A33C2EA09BC300FB1E2D /* CancelLogouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A33B2EA09BC300FB1E2D /* CancelLogouView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +155,36 @@
 		2E76A2532E88189800FB1E2D /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 		2E76A2552E881EF600FB1E2D /* StandingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingModel.swift; sourceTree = "<group>"; };
 		2E76A2572E881FD700FB1E2D /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		2E76A2EE2E88E69300FB1E2D /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		2E76A2F12E891B7000FB1E2D /* ProductDetailHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailHeadView.swift; sourceTree = "<group>"; };
+		2E76A2F32E89602100FB1E2D /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		2E76A2F52E89621600FB1E2D /* ProductHeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductHeaderSectionView.swift; sourceTree = "<group>"; };
+		2E76A2F82E89658D00FB1E2D /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		2E76A2FB2E8966BC00FB1E2D /* ProductModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModelView.swift; sourceTree = "<group>"; };
+		2E76A2FD2E896E4D00FB1E2D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		2E76A3052E8A334D00FB1E2D /* WebPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageViewController.swift; sourceTree = "<group>"; };
+		2E76A3072E8AA5BE00FB1E2D /* Gesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gesture.swift; sourceTree = "<group>"; };
+		2E76A30A2E8B71E100FB1E2D /* KYCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYCViewController.swift; sourceTree = "<group>"; };
+		2E76A30C2E8B71EF00FB1E2D /* FaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
+		2E76A30E2E8B720200FB1E2D /* VerifyIDFinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyIDFinishViewController.swift; sourceTree = "<group>"; };
+		2E76A3102E8B721200FB1E2D /* PerInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerInfoViewController.swift; sourceTree = "<group>"; };
+		2E76A3122E8B722000FB1E2D /* WorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkViewController.swift; sourceTree = "<group>"; };
+		2E76A3142E8B722E00FB1E2D /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		2E76A3162E8B724000FB1E2D /* BankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankViewController.swift; sourceTree = "<group>"; };
+		2E76A3192E8B7AFE00FB1E2D /* VerIDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerIDModel.swift; sourceTree = "<group>"; };
+		2E76A31C2E8B7BFA00FB1E2D /* RZViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RZViewModel.swift; sourceTree = "<group>"; };
+		2E76A3212E8EAAFA00FB1E2D /* NextStepButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextStepButton.swift; sourceTree = "<group>"; };
+		2E76A3232E9D031500FB1E2D /* VerIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerIDViewController.swift; sourceTree = "<group>"; };
+		2E76A3272E9D0E0400FB1E2D /* KYCCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYCCellView.swift; sourceTree = "<group>"; };
+		2E76A3292E9DE49600FB1E2D /* KYCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYCView.swift; sourceTree = "<group>"; };
+		2E76A32B2E9DF8A100FB1E2D /* RZStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RZStepView.swift; sourceTree = "<group>"; };
+		2E76A32D2E9E47FE00FB1E2D /* TopItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopItemView.swift; sourceTree = "<group>"; };
+		2E76A32F2E9E4F3F00FB1E2D /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
+		2E76A3312E9F850900FB1E2D /* PopupAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupAnimator.swift; sourceTree = "<group>"; };
+		2E76A3332E9F894400FB1E2D /* PhoneBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBoxView.swift; sourceTree = "<group>"; };
+		2E76A3372E9F99D500FB1E2D /* PhotoLibraryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryManager.swift; sourceTree = "<group>"; };
+		2E76A3392E9FE94500FB1E2D /* IDCardFinishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDCardFinishView.swift; sourceTree = "<group>"; };
+		2E76A33B2EA09BC300FB1E2D /* CancelLogouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelLogouView.swift; sourceTree = "<group>"; };
 		744CF1E1497B8931DA23F074 /* Pods-ATMSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATMSwift.debug.xcconfig"; path = "Target Support Files/Pods-ATMSwift/Pods-ATMSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,6 +260,7 @@
 		2E1E5DD52E8025B300199191 /* Modules(功能模块) */ = {
 			isa = PBXGroup;
 			children = (
+				2E76A3092E8B71B900FB1E2D /* RZ */,
 				2E76A2EB2E88DE8D00FB1E2D /* ProductDetail */,
 				2E76A2002E863D7300FB1E2D /* Login */,
 				2E1E5DF42E802A8A00199191 /* Mine */,
@@ -253,6 +314,7 @@
 				2E1E606D2E802C0100199191 /* CustomTabBar.swift */,
 				2E76A1FE2E862CC500FB1E2D /* BaseTableViewCell.swift */,
 				2E76A2472E878F4C00FB1E2D /* CustomBaseTableViewController.swift */,
+				2E76A3052E8A334D00FB1E2D /* WebPageViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -307,6 +369,7 @@
 				2E1E60782E80316600199191 /* UIView+Category.swift */,
 				2E1E60792E80316600199191 /* UIColor+Category.h */,
 				2E1E607A2E80316600199191 /* UIColor+Category.m */,
+				2E76A3072E8AA5BE00FB1E2D /* Gesture.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -342,6 +405,9 @@
 				2E76A2072E865C9200FB1E2D /* ShowTip.m */,
 				2E76A22C2E86C85900FB1E2D /* ToolManager.swift */,
 				2E76A22E2E86C89E00FB1E2D /* PageRouter.swift */,
+				2E76A2FD2E896E4D00FB1E2D /* Router.swift */,
+				2E76A3312E9F850900FB1E2D /* PopupAnimator.swift */,
+				2E76A3372E9F99D500FB1E2D /* PhotoLibraryManager.swift */,
 			);
 			path = "Common(公共资源)";
 			sourceTree = "<group>";
@@ -417,8 +483,88 @@
 		2E76A2EB2E88DE8D00FB1E2D /* ProductDetail */ = {
 			isa = PBXGroup;
 			children = (
+				2E76A2FA2E8966AC00FB1E2D /* VM */,
+				2E76A2F72E89657200FB1E2D /* M */,
+				2E76A2F02E891B5E00FB1E2D /* V */,
+				2E76A2EE2E88E69300FB1E2D /* ProductDetailViewController.swift */,
 			);
 			path = ProductDetail;
+			sourceTree = "<group>";
+		};
+		2E76A2F02E891B5E00FB1E2D /* V */ = {
+			isa = PBXGroup;
+			children = (
+				2E76A2F12E891B7000FB1E2D /* ProductDetailHeadView.swift */,
+				2E76A2F32E89602100FB1E2D /* ProductCell.swift */,
+				2E76A2F52E89621600FB1E2D /* ProductHeaderSectionView.swift */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		2E76A2F72E89657200FB1E2D /* M */ = {
+			isa = PBXGroup;
+			children = (
+				2E76A2F82E89658D00FB1E2D /* ProductModel.swift */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		2E76A2FA2E8966AC00FB1E2D /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				2E76A2FB2E8966BC00FB1E2D /* ProductModelView.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		2E76A3092E8B71B900FB1E2D /* RZ */ = {
+			isa = PBXGroup;
+			children = (
+				2E76A31E2E8EAADB00FB1E2D /* V */,
+				2E76A31B2E8B7BCE00FB1E2D /* VM */,
+				2E76A3182E8B7AF000FB1E2D /* M */,
+				2E76A30A2E8B71E100FB1E2D /* KYCViewController.swift */,
+				2E76A30C2E8B71EF00FB1E2D /* FaceViewController.swift */,
+				2E76A30E2E8B720200FB1E2D /* VerifyIDFinishViewController.swift */,
+				2E76A3232E9D031500FB1E2D /* VerIDViewController.swift */,
+				2E76A3102E8B721200FB1E2D /* PerInfoViewController.swift */,
+				2E76A3122E8B722000FB1E2D /* WorkViewController.swift */,
+				2E76A3142E8B722E00FB1E2D /* ContactViewController.swift */,
+				2E76A3162E8B724000FB1E2D /* BankViewController.swift */,
+			);
+			path = RZ;
+			sourceTree = "<group>";
+		};
+		2E76A3182E8B7AF000FB1E2D /* M */ = {
+			isa = PBXGroup;
+			children = (
+				2E76A3192E8B7AFE00FB1E2D /* VerIDModel.swift */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		2E76A31B2E8B7BCE00FB1E2D /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				2E76A31C2E8B7BFA00FB1E2D /* RZViewModel.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		2E76A31E2E8EAADB00FB1E2D /* V */ = {
+			isa = PBXGroup;
+			children = (
+				2E76A3212E8EAAFA00FB1E2D /* NextStepButton.swift */,
+				2E76A3272E9D0E0400FB1E2D /* KYCCellView.swift */,
+				2E76A3292E9DE49600FB1E2D /* KYCView.swift */,
+				2E76A32B2E9DF8A100FB1E2D /* RZStepView.swift */,
+				2E76A32D2E9E47FE00FB1E2D /* TopItemView.swift */,
+				2E76A32F2E9E4F3F00FB1E2D /* CustomAlertView.swift */,
+				2E76A3332E9F894400FB1E2D /* PhoneBoxView.swift */,
+				2E76A3392E9FE94500FB1E2D /* IDCardFinishView.swift */,
+				2E76A33B2EA09BC300FB1E2D /* CancelLogouView.swift */,
+			);
+			path = V;
 			sourceTree = "<group>";
 		};
 		3D50BED0EC19D85F39939356 /* Pods */ = {
@@ -618,31 +764,59 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E76A2562E881EF600FB1E2D /* StandingModel.swift in Sources */,
+				2E76A3322E9F850900FB1E2D /* PopupAnimator.swift in Sources */,
 				2E1E5DE32E8025B300199191 /* AppDelegate.swift in Sources */,
 				2E1E607B2E80316600199191 /* UIColor+Category.m in Sources */,
 				2E76A2382E86CE7500FB1E2D /* HomeModel.swift in Sources */,
+				2E76A2F92E89658D00FB1E2D /* ProductModel.swift in Sources */,
+				2E76A3082E8AA5BE00FB1E2D /* Gesture.swift in Sources */,
 				2E1E607C2E80316600199191 /* UILabel+Category.swift in Sources */,
+				2E76A2F42E89602100FB1E2D /* ProductCell.swift in Sources */,
 				2E76A2352E86CCE800FB1E2D /* HomeViewModel.swift in Sources */,
+				2E76A32E2E9E47FE00FB1E2D /* TopItemView.swift in Sources */,
+				2E76A3382E9F99D500FB1E2D /* PhotoLibraryManager.swift in Sources */,
 				2E76A1FF2E862CC500FB1E2D /* BaseTableViewCell.swift in Sources */,
+				2E76A30B2E8B71E100FB1E2D /* KYCViewController.swift in Sources */,
 				2E76A2582E881FD700FB1E2D /* OrderViewModel.swift in Sources */,
+				2E76A33A2E9FE94500FB1E2D /* IDCardFinishView.swift in Sources */,
+				2E76A30D2E8B71EF00FB1E2D /* FaceViewController.swift in Sources */,
+				2E76A32C2E9DF8A100FB1E2D /* RZStepView.swift in Sources */,
 				2E1E60842E80EA9200199191 /* HomeHeadView.swift in Sources */,
+				2E76A3172E8B724000FB1E2D /* BankViewController.swift in Sources */,
 				2E76A24B2E8791A800FB1E2D /* MineHeadView.swift in Sources */,
 				2E76A2542E88189800FB1E2D /* OrderTableViewCell.swift in Sources */,
 				2E1E607D2E80316600199191 /* UIView+Category.swift in Sources */,
 				2E76A22D2E86C85900FB1E2D /* ToolManager.swift in Sources */,
+				2E76A3112E8B721200FB1E2D /* PerInfoViewController.swift in Sources */,
 				2E1E5DED2E80294A00199191 /* CustomNavigationController.swift in Sources */,
 				2E76A2292E86B5E900FB1E2D /* PhoneNumberTextField.swift in Sources */,
+				2E76A2F22E891B7000FB1E2D /* ProductDetailHeadView.swift in Sources */,
 				2E76A2402E878AB900FB1E2D /* HomeFootView.swift in Sources */,
 				2E1E5DEB2E80289000199191 /* BaseViewController.swift in Sources */,
+				2E76A30F2E8B720200FB1E2D /* VerifyIDFinishViewController.swift in Sources */,
+				2E76A2F62E89621600FB1E2D /* ProductHeaderSectionView.swift in Sources */,
 				2E76A2482E878F4C00FB1E2D /* CustomBaseTableViewController.swift in Sources */,
+				2E76A31A2E8B7AFE00FB1E2D /* VerIDModel.swift in Sources */,
 				2E76A2272E86B25300FB1E2D /* LoginViewModel.swift in Sources */,
+				2E76A32A2E9DE49600FB1E2D /* KYCView.swift in Sources */,
 				2E76A2022E863D9200FB1E2D /* LoginViewController.swift in Sources */,
 				2E1E60822E80EA0900199191 /* HomeTableViewCell.swift in Sources */,
+				2E76A3282E9D0E0400FB1E2D /* KYCCellView.swift in Sources */,
 				2E1E60732E8030F100199191 /* ColorMacros.swift in Sources */,
 				2E76A2252E869F0C00FB1E2D /* CommonParamsPlugin.swift in Sources */,
+				2E76A33C2EA09BC300FB1E2D /* CancelLogouView.swift in Sources */,
+				2E76A3222E8EAAFA00FB1E2D /* NextStepButton.swift in Sources */,
+				2E76A2EF2E88E69300FB1E2D /* ProductDetailViewController.swift in Sources */,
+				2E76A3342E9F894400FB1E2D /* PhoneBoxView.swift in Sources */,
+				2E76A3302E9E4F3F00FB1E2D /* CustomAlertView.swift in Sources */,
+				2E76A2FC2E8966BC00FB1E2D /* ProductModelView.swift in Sources */,
+				2E76A3242E9D031500FB1E2D /* VerIDViewController.swift in Sources */,
 				2E1E60742E8030F100199191 /* DimensMacros.swift in Sources */,
 				2E1E60752E8030F100199191 /* importPod.swift in Sources */,
 				2E76A2042E863E2A00FB1E2D /* LoginHeadView.swift in Sources */,
+				2E76A2FE2E896E4D00FB1E2D /* Router.swift in Sources */,
+				2E76A3062E8A334D00FB1E2D /* WebPageViewController.swift in Sources */,
+				2E76A3152E8B722E00FB1E2D /* ContactViewController.swift in Sources */,
 				2E1E5DF62E802A9700199191 /* MineViewController.swift in Sources */,
 				2E76A2322E86CA4600FB1E2D /* LoginResponseModel.swift in Sources */,
 				2E76A1EE2E859A6B00FB1E2D /* ReplyCollectionViewCell.m in Sources */,
@@ -651,10 +825,12 @@
 				2E76A1EF2E859A6B00FB1E2D /* ReplyView.m in Sources */,
 				2E1E606E2E802C0100199191 /* CustomTabBar.swift in Sources */,
 				2E76A2232E868CC100FB1E2D /* API.swift in Sources */,
+				2E76A31D2E8B7BFA00FB1E2D /* RZViewModel.swift in Sources */,
 				2E76A2082E865C9200FB1E2D /* ShowTip.m in Sources */,
 				2E1E5DF32E802A7B00199191 /* OrderViewController.swift in Sources */,
 				2E1E5DE92E80280A00199191 /* CustomTabBarController.swift in Sources */,
 				2E76A22F2E86C89E00FB1E2D /* PageRouter.swift in Sources */,
+				2E76A3132E8B722000FB1E2D /* WorkViewController.swift in Sources */,
 				2E76A2212E868B9600FB1E2D /* ResponseModel.swift in Sources */,
 				2E1E5DF02E802A3000199191 /* HomeViewController.swift in Sources */,
 			);
@@ -716,6 +892,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 469YBH893T;
@@ -734,6 +911,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.binbin.ATMSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "ATMSwift/ATMSwift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -749,6 +927,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 469YBH893T;
@@ -767,6 +946,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.binbin.ATMSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "ATMSwift/ATMSwift-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

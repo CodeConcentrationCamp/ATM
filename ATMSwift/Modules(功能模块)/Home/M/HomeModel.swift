@@ -8,6 +8,9 @@
 import UIKit
 import HandyJSON
 struct HomeModel: HandyJSON {
+    
+    var patent:String?
+    
     var glow: ProducrModel?
     var lighting:ProducrModel?
     var candle:ProducrModel?

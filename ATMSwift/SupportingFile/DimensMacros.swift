@@ -26,12 +26,33 @@ var navigationBarHeight:CGFloat{
     return 44.0
 }
 
+
+/**
+ 顶部状态栏高度（包括安全区）
+ */
+var statusBarHeight: CGFloat {
+    if #available(iOS 13.0, *) {
+        let set:NSSet!
+        let windowSceneset:UIWindowScene!
+        set = UIApplication.shared.connectedScenes as NSSet
+        windowSceneset = (set.anyObject() as! UIWindowScene)
+        let statusBarManager:UIStatusBarManager!
+        statusBarManager = windowSceneset.statusBarManager
+       // print("==顶部状态栏高度（包括安全区）==%f",statusBarManager.statusBarFrame.size.height);
+        return statusBarManager.statusBarFrame.size.height
+    }else{
+        return UIApplication.shared.statusBarFrame.size.height
+    }
+}
+
 /**
  状态栏+导航栏的高度
  */
 var navigationFullHeight:CGFloat{
-    return safeDistanceTop + navigationBarHeight
+    return statusBarHeight + navigationBarHeight
 }
+
+
 
 /**
  底部导航栏高度
@@ -87,23 +108,6 @@ var safeDistanceBottom: CGFloat {
 }
 
 
-/**
- 顶部状态栏高度（包括安全区）
- */
-var statusBarHeight: CGFloat {
-    if #available(iOS 13.0, *) {
-        let set:NSSet!
-        let windowSceneset:UIWindowScene!
-        set = UIApplication.shared.connectedScenes as NSSet
-        windowSceneset = (set.anyObject() as! UIWindowScene)
-        let statusBarManager:UIStatusBarManager!
-        statusBarManager = windowSceneset.statusBarManager
-       // print("==顶部状态栏高度（包括安全区）==%f",statusBarManager.statusBarFrame.size.height);
-        return statusBarManager.statusBarFrame.size.height
-    }else{
-        return UIApplication.shared.statusBarFrame.size.height
-    }
-}
 
 
 var tabBarFullHeight:CGFloat{

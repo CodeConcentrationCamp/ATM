@@ -13,6 +13,8 @@ class HomeViewModel: NSObject {
     // - 数据源更新
     var upDataBlock:((String,HomeModel?) -> (Void))?
     
+    var upClickDataBlock:((_ patent:String) -> (Void))?
+    
     func homeDetail(){
         NetworkManager.shared.request(API.homeDetail, modelType: HomeModel.self) { [self] mm, responseModel in
             homeModel = mm
@@ -21,4 +23,29 @@ class HomeViewModel: NSObject {
             
         }
     }
+    
+    
+    func clickApply(proID:String?){
+        NetworkManager.shared.request(API.clickProduct(proID: proID!), modelType: HomeModel.self) { mm, responseModel in
+            self.upClickDataBlock?(mm.patent!)
+        } failureCallback: { responseModel in
+            
+        }
+    }
+    
+    
+    func homeCardAndItemCellClick(hoemModel:HomeModel?,proID:String?,vc:UIViewController){
+        if homeModel == nil{
+            ShowTip.showMessage("Data not obtained")
+        }
+        
+        if hoemModel?.overhauling == "1"{
+            
+        }else{
+            
+        }
+    }
+    
+    
+    
 }

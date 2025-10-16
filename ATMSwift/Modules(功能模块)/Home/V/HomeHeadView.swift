@@ -12,6 +12,7 @@ import UIKit
 class HomeHeadView: UIView, ReplyViewDelegate {
     
     var urlArray = Array<String>()
+    var buttonAction: (() -> Void)?
     
     var homeModel: HomeModel?{
         didSet{
@@ -49,8 +50,14 @@ class HomeHeadView: UIView, ReplyViewDelegate {
         let topBgImageView = UIImageView(frame:CGRect(x: 0, y: 0, width: KScreenWidth, height: 450))
         topBgImageView.image = UIImage(named: "home1")
         topBgImageView.isUserInteractionEnabled = true
+        topBgImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(homeJump)))
+       
         return topBgImageView
     }()
+    
+    @objc func homeJump(){
+         buttonAction?()
+    }
     
     lazy var cardImageView: UIImageView = {
         let cardImageView = UIImageView(frame:CGRect(x: 0, y: 66, width: KScreenWidth, height: 307))

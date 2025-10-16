@@ -37,21 +37,24 @@ class CustomBaseTableViewController: BaseViewController {
         mainTableView.estimatedSectionHeaderHeight = 0
         mainTableView.showsHorizontalScrollIndicator = false
         mainTableView.showsVerticalScrollIndicator = false
-     //   mainTableView.delegate = self
-      //  mainTableView.dataSource = self
         mainTableView.backgroundColor = Default_BackGround_Color!
         if #available(iOS 15.0,*){
             mainTableView.sectionHeaderTopPadding = 0;
-            
-            mainTableView.contentInsetAdjustmentBehavior = .never
-            mainTableView.scrollIndicatorInsets = mainTableView.contentInset
         }
+        
+        
 
+        // 适配安全区域（iOS 11+）
+               if #available(iOS 11.0, *) {
+                   mainTableView.contentInsetAdjustmentBehavior = .never
+                   mainTableView.scrollIndicatorInsets = view.safeAreaInsets
+               } else {
+                   automaticallyAdjustsScrollViewInsets = false
+               }
         return mainTableView
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubview(mainTableView)
     }
 
 }

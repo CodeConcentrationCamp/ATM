@@ -88,8 +88,31 @@ class SetUpViewController: BaseViewController {
             make.centerY.equalTo(logoutImageView.snp.centerY)
         }
         
+        logoutImageView.addTapGesture { tap in
+            let cancelLogouView = CancelLogouView(frame: CGRectMake(0, 0, KScreenWidth, KScreenHeight), type: 0) { customView in
+                PopupAnimator.shared.dismiss(view: customView)
+            } leftHander: {[weak self] customView in
+                ShowTip.showLoading()
+                self?.cancelOut(customView: customView)
+            }
+            PopupAnimator.shared.present(view: cancelLogouView,type: .fromCenter)
+        }
+        
         return logoutImageView
     }()
+    
+    
+    func cancelOut(customView:CancelLogouView){
+        NetworkManager.shared.request(API.outLogin, modelType: ResponseModel.self) { mm, responseModel in
+            ShowTip.hideLoading()
+            ToolManager.shared.saveData("", forKey: "ATM_SessionId")
+            PopupAnimator.shared.dismiss(view: customView)
+            PageRouter.changeHomeOrLoginPage()
+        } failureCallback: { responseModel in
+            ShowTip.hideLoadingMessage(responseModel.msg ?? "")
+            ShowTip.hideLoading()
+        }
+    }
     
     lazy var cancelAccount: UIButton = {
         let cancelAccount = UIButton(frame: .zero)
@@ -98,8 +121,19 @@ class SetUpViewController: BaseViewController {
         cancelAccount.cornerRadius = 12
         cancelAccount.layer.borderColor = UIColorFromHex("0xA29B91")!.cgColor
         cancelAccount.layer.borderWidth = 1
+        cancelAccount.addTarget(self, action: #selector(cancelAccountClick), for: .touchUpInside)
         return cancelAccount
     }()
+    
+    @objc func cancelAccountClick(){
+        let cancelLogouView = CancelLogouView(frame: CGRectMake(0, 0, KScreenWidth, KScreenHeight), type: 1) { customView in
+            PopupAnimator.shared.dismiss(view: customView)
+        } leftHander: { [weak self] customView in
+            ShowTip.showLoading()
+            self?.cancelOut(customView: customView)
+        }
+        PopupAnimator.shared.present(view: cancelLogouView,type: .fromCenter)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -143,6 +177,14 @@ class SetUpViewController: BaseViewController {
             make.left.equalTo(15)
             make.right.equalTo(-15)
             make.top.equalTo(versionImageView.snp.bottom).offset(15)
+            make.height.equalTo(52)
+        }
+        
+        self.view.addSubview(cancelAccount)
+        cancelAccount.snp.makeConstraints { make in
+            make.left.equalTo(15)
+            make.right.equalTo(-15)
+            make.top.equalTo(centerImageView.snp.bottom).offset(15)
             make.height.equalTo(52)
         }
         

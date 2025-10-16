@@ -41,4 +41,19 @@ class ToolManager: NSObject {
            
            return "\(prefix)****\(suffix)"
        }
+    
+    
+    func jumpWebWithUrl(url:String,source:String? = ""){
+        if let globalNav = CustomNavigationController.current() {
+            let webVC = WebPageViewController()
+            webVC.urlString = url
+            globalNav.pushViewController(webVC, animated: true)
+            print("找到全局导航控制器：\(globalNav)")
+        }
+
+
+    }
+    
 }
+
+

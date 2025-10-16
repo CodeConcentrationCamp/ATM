@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(void)hideLoading;
 +(void)showMessage:(NSString *)text;
 +(void)hideLoadingMessage:(NSString *)msg;
++ (NSData *)resetSizeOfImageData:(UIImage *)sourceImage maxSize:(NSInteger)maxSizeKB ;
 @end
 
 NS_ASSUME_NONNULL_END
