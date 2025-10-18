@@ -13,6 +13,7 @@ class RZViewModel: NSObject {
     // - 数据源更新
     var upDataBlock:((String,VerIDModel?) -> (Void))?
     
+    
     func saveUserInfo(withId productID: String, subsided: String, excitement:String, slice:String,church:String,completion: @escaping (Bool, String) -> Void) {
         ShowTip.showLoading()
         NetworkManager.shared.request(API.saveUserInfo(proID: productID, subsided: subsided, excitement:excitement, slice: slice, church: church), modelType: ResponseModel.self) { mm, responseModel in
@@ -26,7 +27,7 @@ class RZViewModel: NSObject {
                     completion(false, responseModel.msg ?? "")
                 }
             }
-        }failureCallback: { responseModel in
+        }failure:{ error,responseModel in
             completion(false, responseModel.msg ?? "")
             ShowTip.hideLoading()
         }
@@ -36,11 +37,11 @@ class RZViewModel: NSObject {
     func getKYCVerID(image: UIImage, reflection: String,says: String,lamps: String,church: String,submit :String,ruling: String = ""){
         ShowTip.showLoading()
         let imageWaterData =  ShowTip.resetSize(ofImageData: image, maxSize: 800)
-        NetworkManager.shared.request(API.uploadAvatar(imageData: imageWaterData, reflection: "10", says: says, lamps: "11", church: church, submit: "1", ruling: ""), modelType: VerIDModel.self) { mm, responseModel in
+        NetworkManager.shared.request(API.uploadAvatar(imageData: imageWaterData, reflection: reflection, says: says, lamps: lamps, church: church, submit: "1", ruling: ""), modelType: VerIDModel.self) { mm, responseModel in
             ShowTip.hideLoading()
             self.verIDModel = mm
             self.upDataBlock?("success",mm)
-        }failureCallback: { responseModel in
+        }failure:{ error,responseModel in
             ShowTip.hideLoading()
         }
     }
@@ -51,7 +52,7 @@ class RZViewModel: NSObject {
             ShowTip.hideLoading()
             self.verIDModel = mm
             self.upDataBlock?("success",mm)
-        } failureCallback: { responseModel in
+        } failure:{ error,responseModel in
             
         }
     }
@@ -65,7 +66,7 @@ class RZViewModel: NSObject {
             if url.isEmpty == false{
                 ToolManager.shared.jumpWebWithUrl(url: url)
             }
-        } failureCallback: { responseModel in
+        } failure:{ error,responseModel in
             
         }
     }

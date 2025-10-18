@@ -23,8 +23,8 @@ class WebPageViewController: BaseViewController {
         configuration.preferences.setValue(true, forKey: "allowFileAccessFromFileURLs")
         // 创建WKWebView
         let webView = WKWebView(frame: .zero, configuration: configuration)
-        webView.backgroundColor = Default_BackGround_Color!
-        webView.scrollView.backgroundColor = Default_BackGround_Color!
+        webView.backgroundColor = Default_BackGround_Color
+        webView.scrollView.backgroundColor = Default_BackGround_Color
         webView.scrollView.bounces = false // 禁用回弹
         return webView
     }()
@@ -78,7 +78,7 @@ class WebPageViewController: BaseViewController {
     
     // MARK: - UI设置
     private func setupUI() {
-        view.backgroundColor =  Default_BackGround_Color!
+        view.backgroundColor =  Default_BackGround_Color
         title = ""
         
         // 添加进度条

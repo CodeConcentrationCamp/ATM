@@ -29,11 +29,13 @@ func UIColorFromHexA(_ rgbValue: String,_ a:CGFloat) -> UIColor? {
 }
 
 /// 主题色--背景色
-let Default_BackGround_Color =  UIColorFromHex("0xEFDFBF")
-let Default_Black0_Color = UIColorFromHex("0x000000")
-let Default_Black3_Color = UIColorFromHex("0x333333")
-let Default_Black6_Color = UIColorFromHex("0x666666")
-let Default_Black9_Color = UIColorFromHex("0x999999")
+let Default_BackGround_Color =  UIColorFromHex("0xEFDFBF") ?? .clear
+
+let Default_Black0_Color = UIColorFromHex("0x000000") ?? .black
+let Default_Black3_Color = UIColorFromHex("0x333333") ?? .black
+let Default_Black6_Color = UIColorFromHex("0x666666") ?? .black
+let Default_Black9_Color = UIColorFromHex("0x999999") ?? .black
+
 let Default_Line_Color = UIColorFromHex("0xE5E5E5")
 let Default_Red_Color = UIColorFromHex("0xDF2A4A")
 let Default_Green_Color = UIColorFromHex("0x3EB664")

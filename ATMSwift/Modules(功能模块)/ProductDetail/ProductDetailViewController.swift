@@ -49,6 +49,7 @@ class ProductDetailViewController: CustomBaseTableViewController {
         gogo.frame = CGRect(x: 15, y: CGRectGetMaxY(self.mainTableView.frame), width: KScreenWidth - 30, height: 50)
         gogo.setImage(UIImage(named: "pro5"), for: .normal)
         gogo.setBackgroundImage(UIImage(named: "pro4"), for: .normal)
+        gogo.addTarget(self, action: #selector(gogoClick), for: .touchUpInside)
         self.view.addSubview(gogo)
         
         viewModel.getProductDetail(proID: self.proID)
@@ -60,6 +61,11 @@ class ProductDetailViewController: CustomBaseTableViewController {
             }
         }
     }
+    
+    @objc func gogoClick(){
+        PageRouter.jumpPage(proID)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: false)

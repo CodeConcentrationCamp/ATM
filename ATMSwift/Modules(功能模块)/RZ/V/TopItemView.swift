@@ -12,7 +12,7 @@ class TopItemView: UIView {
     init(frame: CGRect,height: CGFloat,topBg: String,titleStr: String) {
          super.init(frame: frame)
         
-        let cellBgView = UIView().bb_ViewWithFrame(frame: self.bounds, backgroundColor: Default_BackGround_Color!)
+        let cellBgView = UIView().bb_ViewWithFrame(frame: self.bounds, backgroundColor: Default_BackGround_Color)
         cellBgView.cornerRadius = 8
         cellBgView.layer.borderColor = UIColorFromHex("0X1C1F1F")!.cgColor
         cellBgView.layer.borderWidth = 1
@@ -48,7 +48,7 @@ class TopItemView: UIView {
         }
         
         
-        let tip = UILabel().bb_LabelWithFrame(frame: .zero, text: titleStr, textColor: Default_Black0_Color!, fontSize: 14, textAlignment: .center)
+        let tip = UILabel().bb_LabelWithFrame(frame: .zero, text: titleStr, textColor: Default_Black0_Color, fontSize: 14, textAlignment: .center)
         tip.font = UIFont.boldSystemFont(ofSize: 14)
         topImageView.addSubview(tip)
         tip.snp.makeConstraints { make in

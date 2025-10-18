@@ -9,9 +9,10 @@ import UIKit
 
 class LoginViewModel: NSObject {
     func getSMSCode(phoneNum:String!){
+        
         NetworkManager.shared.request(API.getLoginCode(phoneNum: phoneNum), modelType: ResponseModel.self) { mm, responseModel in
             ShowTip.showMessage(responseModel.msg!)
-        } failureCallback: { responseModel in
+        } failure: { error, responseModel in
             ShowTip.showMessage(responseModel.msg!)
         }
     }
@@ -22,7 +23,7 @@ class LoginViewModel: NSObject {
             ToolManager.shared.saveData(mm.invented!, forKey: "PhoneNum")
             ToolManager.shared.saveData(mm.undertaking!, forKey: "ATM_SessionId")
             PageRouter.changeHomeOrLoginPage()
-        } failureCallback: { responseModel in
+        } failure: { error,responseModel in
             ShowTip.showMessage(responseModel.msg!)
         }
     }

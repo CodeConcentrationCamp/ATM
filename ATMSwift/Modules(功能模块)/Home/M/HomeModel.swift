@@ -7,8 +7,8 @@
 
 import UIKit
 import HandyJSON
-struct HomeModel: HandyJSON {
-    
+struct HomeModel: HandyJSON{
+
     var patent:String?
     
     var glow: ProducrModel?

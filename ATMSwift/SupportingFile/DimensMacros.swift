@@ -96,11 +96,11 @@ var safeDistanceBottom: CGFloat {
         set = UIApplication.shared.connectedScenes as NSSet
         windowSceneset = (set.anyObject() as! UIWindowScene)
         ww = windowSceneset.windows.first
-        print("底部安全区高度==%f", ww.safeAreaInsets.bottom)
+       // print("底部安全区高度==%f", ww.safeAreaInsets.bottom)
         return ww.safeAreaInsets.bottom
     } else  {
         if let window = UIApplication.shared.windows.first {
-             print("底部安全区高度==%f", window.safeAreaInsets.bottom)
+         //    print("底部安全区高度==%f", window.safeAreaInsets.bottom)
             return window.safeAreaInsets.bottom
         }
     }

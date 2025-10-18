@@ -10,17 +10,17 @@ import UIKit
 class IDCardFinishView: UIView {
     
     var closeHandler: ((_ customView:IDCardFinishView) -> Void)?
-    var commitHandler: ((_ customView:IDCardFinishView) -> Void)?
+    var commitHandler: ((_ customView:IDCardFinishView,_ name:String?,_ num:String?,_ dateBirth:String?) -> Void)?
     
     lazy var dayLabel: UILabel = {
-        let dayLabel = UILabel().bb_LabelWithFrame(frame: .zero, text: "", textColor: Default_Black0_Color!, fontSize: 14, textAlignment: .center)
+        let dayLabel = UILabel().bb_LabelWithFrame(frame: .zero, text: "", textColor: Default_Black0_Color, fontSize: 14, textAlignment: .center)
         return dayLabel
     }()
     
     lazy var nameTextFild: UITextField = {
         nameTextFild = UITextField(frame: .zero)
         nameTextFild.font = UIFont.systemFont(ofSize: 14)
-        nameTextFild.textColor = Default_Black3_Color!
+        nameTextFild.textColor = Default_Black3_Color
         nameTextFild.textAlignment = .center
         return nameTextFild
     }()
@@ -28,7 +28,7 @@ class IDCardFinishView: UIView {
     lazy var idTextFild: UITextField = {
         idTextFild = UITextField(frame: .zero)
         idTextFild.font = UIFont.systemFont(ofSize: 14)
-        idTextFild.textColor = Default_Black3_Color!
+        idTextFild.textColor = Default_Black3_Color
         idTextFild.textAlignment = .center
         return idTextFild
     }()
@@ -36,7 +36,7 @@ class IDCardFinishView: UIView {
     lazy var nextStepButton: NextStepButton = {
         let nextStepButton = NextStepButton(frame:CGRectZero)
         nextStepButton.setClickHandler { [self] in
-            self.commitHandler?(self)
+            self.commitHandler?(self,self.nameTextFild.text,self.idTextFild.text,self.dayLabel.text)
         }
         return nextStepButton
     }()
@@ -52,7 +52,7 @@ class IDCardFinishView: UIView {
         self.closeHandler?(self)
     }
     
-    init(frame: CGRect,name:String?,num:String?,data:String?, closeHandler: ((_ customView:IDCardFinishView) -> Void)?,commitHandler: ((_ customView:IDCardFinishView) -> Void)?) {
+    init(frame: CGRect,name:String?,num:String?,data:String?, closeHandler: ((_ customView:IDCardFinishView) -> Void)?,commitHandler: ((_ customView:IDCardFinishView,_ name:String?,_ num:String?,_ dateBirth:String?) -> Void)?) {
         super.init(frame: frame)
         self.closeHandler = closeHandler
         self.commitHandler = commitHandler
@@ -80,6 +80,7 @@ class IDCardFinishView: UIView {
         
         let card1 = UIImageView(frame: .zero)
         card1.image = UIImage(named: "rz42")
+        card1.isUserInteractionEnabled = true
         bgView.addSubview(card1)
         card1.snp.makeConstraints { make in
             make.centerX.equalTo(self.snp.centerX)
@@ -89,7 +90,7 @@ class IDCardFinishView: UIView {
             make.height.equalTo(86)
         }
         
-        let cardL = UILabel().bb_LabelWithFrame(frame: .zero, text: "Full Name", textColor: Default_Black3_Color!, fontSize: 14, textAlignment: .center)
+        let cardL = UILabel().bb_LabelWithFrame(frame: .zero, text: "Full Name", textColor: Default_Black3_Color, fontSize: 14, textAlignment: .center)
         cardL.font = UIFont.boldSystemFont(ofSize: 14)
         card1.addSubview(cardL)
         cardL.snp.makeConstraints { make in
@@ -108,8 +109,8 @@ class IDCardFinishView: UIView {
         
         let card2 = UIImageView(frame: .zero)
         card2.image = UIImage(named: "rz42")
+        card2.isUserInteractionEnabled = true
         bgView.addSubview(card2)
-        card2.isUserInteractionEnabled = false
         card2.snp.makeConstraints { make in
             make.left.equalTo(15)
             make.right.equalTo(-15)
@@ -127,7 +128,7 @@ class IDCardFinishView: UIView {
             make.height.equalTo(44)
         }
         
-        let card2L = UILabel().bb_LabelWithFrame(frame: .zero, text: "ID NO.", textColor: Default_Black3_Color!, fontSize: 14, textAlignment: .center)
+        let card2L = UILabel().bb_LabelWithFrame(frame: .zero, text: "ID NO.", textColor: Default_Black3_Color, fontSize: 14, textAlignment: .center)
         card2L.font = UIFont.boldSystemFont(ofSize: 14)
         card2.addSubview(card2L)
         card2L.snp.makeConstraints { make in
@@ -137,6 +138,7 @@ class IDCardFinishView: UIView {
         
         let card3 = UIImageView(frame: .zero)
         card3.image = UIImage(named: "rz42")
+        card3.isUserInteractionEnabled = true
         bgView.addSubview(card3)
         card3.isUserInteractionEnabled = false
         card3.snp.makeConstraints { make in
@@ -147,7 +149,7 @@ class IDCardFinishView: UIView {
             make.centerX.equalTo(bgView.snp.centerX)
         }
         
-        let card3L = UILabel().bb_LabelWithFrame(frame: .zero, text: "Date of Birth", textColor: Default_Black3_Color!, fontSize: 14, textAlignment: .center)
+        let card3L = UILabel().bb_LabelWithFrame(frame: .zero, text: "Date of Birth", textColor: Default_Black3_Color, fontSize: 14, textAlignment: .center)
         card3L.font = UIFont.boldSystemFont(ofSize: 14)
         card3.addSubview(card3L)
         card3L.snp.makeConstraints { make in

@@ -37,7 +37,7 @@ class CustomBaseTableViewController: BaseViewController {
         mainTableView.estimatedSectionHeaderHeight = 0
         mainTableView.showsHorizontalScrollIndicator = false
         mainTableView.showsVerticalScrollIndicator = false
-        mainTableView.backgroundColor = Default_BackGround_Color!
+        mainTableView.backgroundColor = Default_BackGround_Color
         if #available(iOS 15.0,*){
             mainTableView.sectionHeaderTopPadding = 0;
         }

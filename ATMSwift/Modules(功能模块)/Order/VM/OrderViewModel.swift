@@ -18,7 +18,7 @@ class OrderViewModel: NSObject {
         NetworkManager.shared.request(API.orderDetail(state: state), modelType: OrderModel.self) { mm, responseModel in
             self.orderModel = mm
             self.upDataBlock?("success",mm)
-        } failureCallback: { responseModel in
+        } failure:{ error,responseModel in
             
         }
     }

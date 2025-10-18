@@ -27,7 +27,7 @@ class PhoneBoxView: UIView {
         btn.setTitle("Photo Album", for: .normal)
         btn.setImage(UIImage(named: "rz31"), for: .normal)
         btn.setBackgroundImage(UIImage(named: "rz30"), for: .normal)
-        btn.setTitleColor(Default_Black0_Color!, for: .normal)
+        btn.setTitleColor(Default_Black0_Color, for: .normal)
         btn.setImagePosition(.left, spacing: 5)
         return btn
     }()
@@ -37,7 +37,7 @@ class PhoneBoxView: UIView {
         btn.setTitle("Photograph", for: .normal)
         btn.setImage(UIImage(named: "rz32"), for: .normal)
         btn.setBackgroundImage(UIImage(named: "rz30"), for: .normal)
-        btn.setTitleColor(Default_Black0_Color!, for: .normal)
+        btn.setTitleColor(Default_Black0_Color, for: .normal)
         btn.setImagePosition(.left, spacing: 5)
         
         return btn
@@ -90,7 +90,7 @@ class PhoneBoxView: UIView {
     private func setupActions() {
         albumBtn.addTarget(self, action: #selector(albumTapped), for: .touchUpInside)
         cameraBtn.addTarget(self, action: #selector(cameraTapped), for: .touchUpInside)
-       // closeButton.addTarget(self, action: #selector(closeTapped), for: .touchUpInside)
+        closeButton.addTarget(self, action: #selector(closeTapped), for: .touchUpInside)
     }
     
     // MARK: - 事件处理

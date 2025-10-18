@@ -133,8 +133,8 @@ class PageRouter: NSObject {
                             if mm?.remarked == "0"{
                                 if  let nav = CustomNavigationController.current(){
                                     let vc = FaceViewController()
-                                    vc.productID = proID
-                                    vc.titleString = mm?.steeple?.church
+                                    vc.productID = proID!
+                                    vc.selectTitle = (mm?.steeple?.church)!
                                     nav.pushViewController(vc, animated: true)
                                 }
                             }else{

@@ -9,6 +9,10 @@ import UIKit
 import HandyJSON
 
 class ResponseModel:HandyJSON{
+    required init() {
+        
+    }
+    
 
     var code:Int?
     var msg:String?
@@ -17,7 +21,9 @@ class ResponseModel:HandyJSON{
     var list:Array<Any>?
     var valueData:String?
     
-    required init() {}
+    required init(code:Int?,msg:String?,data:Dictionary<String, Any>?) {
+        
+    }
     
     func mapping(mapper: HelpingMapper) {
 

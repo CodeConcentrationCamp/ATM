@@ -16,14 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         self.window = UIWindow.init()
-        self.window?.backgroundColor = Default_BackGround_Color!
+        self.window?.backgroundColor = Default_BackGround_Color
         self.window?.frame = UIScreen.main.bounds
         self.window?.makeKeyAndVisible()
         PageRouter.changeHomeOrLoginPage()
         
-        
-        
-        
+        IQKeyboardManager.shared().isEnabled = true
+        IQKeyboardManager.shared().shouldShowToolbarPlaceholder = false;
+        IQKeyboardManager.shared().shouldResignOnTouchOutside = true;
         return true
     }
 

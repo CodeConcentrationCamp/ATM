@@ -70,14 +70,14 @@ struct CommonParamsPlugin: PluginType {
     /// 打印请求信息（方便调试）
     func willSend(_ request: RequestType, target: TargetType) {
         if let url = request.request?.url?.absoluteString {
-            print("🚀 [\(target.method)] 请求URL: \(url)")
+           // print("🚀 [\(target.method)] 请求URL: \(url)")
         }
         
         // 打印POST请求的body参数
         if target.method == .post,
            let body = request.request?.httpBody,
            let bodyStr = String(data: body, encoding: .utf8) {
-            print("📦 POST Body参数: \(bodyStr)")
+          //  print("📦 POST Body参数: \(bodyStr)")
         }
     }
 }

@@ -103,4 +103,21 @@ final class Router {
         guard let topVC = getTopViewController() else { return }
         topVC.dismiss(animated: animated, completion: completion)
     }
+    
+    // 方法：获取当前活跃的 keyWindow
+    func getCurrentKeyWindow() -> UIWindow? {
+        // 1. 遍历所有活跃的场景
+        if #available(iOS 15.0, *) {
+            return UIApplication.shared.connectedScenes
+                // 筛选出活跃的场景
+               .filter { $0.activationState == .foregroundActive }
+                // 转换为 UIWindowScene
+               .compactMap { $0 as? UIWindowScene }
+                // 获取场景中的 keyWindow
+               .first?.keyWindow
+        } else {
+            // iOS 15 以下兼容写法
+            return UIApplication.shared.keyWindow
+        }
+    }
 }

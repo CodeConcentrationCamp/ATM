@@ -14,9 +14,9 @@ class NextStepButton: UIButton {
     private var clickHandler: ClickHandler?
     
     // 初始化方法，可设置按钮的样式等
-    override init(frame: CGRect) {
+    init(frame: CGRect,_ name:String? = "rz17",_ bgName:String? = "pro4") {
         super.init(frame: frame)
-        commonInit()
+        commonInit(name,bgName)
     }
     
     required init?(coder: NSCoder) {
@@ -24,11 +24,11 @@ class NextStepButton: UIButton {
         commonInit()
     }
     
-    private func commonInit() {
+    private func commonInit(_ name:String? = "rz17",_ bgName:String? = "pro4") {
         // 设置按钮的背景颜色、文字颜色、字体等样式
-        setBackgroundImage(UIImage(named: "pro4"), for: .normal)
+        setBackgroundImage(UIImage(named: bgName!), for: .normal)
         setTitleColor(.white, for: .normal)
-        setImage(UIImage(named: "rz17"), for: .normal)
+        setImage(UIImage(named: name!), for: .normal)
         // 添加点击事件
         addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
     }

@@ -28,7 +28,7 @@ class CustomTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = Default_BackGround_Color!
+        self.view.backgroundColor = Default_BackGround_Color
         setUpChildViewController()
         setUpTabBar()
         setUpTabBarItemAppearance()

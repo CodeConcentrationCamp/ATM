@@ -108,7 +108,7 @@ class SetUpViewController: BaseViewController {
             ToolManager.shared.saveData("", forKey: "ATM_SessionId")
             PopupAnimator.shared.dismiss(view: customView)
             PageRouter.changeHomeOrLoginPage()
-        } failureCallback: { responseModel in
+        } failure:{ error,responseModel in
             ShowTip.hideLoadingMessage(responseModel.msg ?? "")
             ShowTip.hideLoading()
         }
@@ -138,7 +138,7 @@ class SetUpViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Set Up"
-        self.view.backgroundColor = Default_BackGround_Color!
+        self.view.backgroundColor = Default_BackGround_Color
         prepareUI()
     }
         

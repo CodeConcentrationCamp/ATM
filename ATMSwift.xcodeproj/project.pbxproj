@@ -81,6 +81,16 @@
 		2E76A3382E9F99D500FB1E2D /* PhotoLibraryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A3372E9F99D500FB1E2D /* PhotoLibraryManager.swift */; };
 		2E76A33A2E9FE94500FB1E2D /* IDCardFinishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A3392E9FE94500FB1E2D /* IDCardFinishView.swift */; };
 		2E76A33C2EA09BC300FB1E2D /* CancelLogouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A33B2EA09BC300FB1E2D /* CancelLogouView.swift */; };
+		2E76A3472EA0E52700FB1E2D /* PerInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A3462EA0E52700FB1E2D /* PerInfoModel.swift */; };
+		2E76A3492EA0E6A800FB1E2D /* PerInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A3482EA0E6A800FB1E2D /* PerInfoViewModel.swift */; };
+		2E76A34C2EA0EA0800FB1E2D /* PerInfoFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A34B2EA0EA0800FB1E2D /* PerInfoFooterView.swift */; };
+		2E76A34E2EA0FDD400FB1E2D /* DanGeXuanZeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A34D2EA0FDD400FB1E2D /* DanGeXuanZeView.swift */; };
+		2E76A3502EA1F48F00FB1E2D /* AddressCictSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A34F2EA1F48F00FB1E2D /* AddressCictSelectView.swift */; };
+		2E76A3522EA2027300FB1E2D /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A3512EA2027300FB1E2D /* CityModel.swift */; };
+		2E76A3542EA231D600FB1E2D /* UIComponent+QuickCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A3532EA231D600FB1E2D /* UIComponent+QuickCreate.swift */; };
+		2E76A3562EA23C6800FB1E2D /* Untitled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A3552EA23C6600FB1E2D /* Untitled.swift */; };
+		2E76A3592EA2476F00FB1E2D /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A3582EA2476F00FB1E2D /* HomeService.swift */; };
+		2E76A35B2EA331D700FB1E2D /* NetMangerTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E76A35A2EA331D700FB1E2D /* NetMangerTool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,17 +195,31 @@
 		2E76A3372E9F99D500FB1E2D /* PhotoLibraryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryManager.swift; sourceTree = "<group>"; };
 		2E76A3392E9FE94500FB1E2D /* IDCardFinishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDCardFinishView.swift; sourceTree = "<group>"; };
 		2E76A33B2EA09BC300FB1E2D /* CancelLogouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelLogouView.swift; sourceTree = "<group>"; };
+		2E76A3462EA0E52700FB1E2D /* PerInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerInfoModel.swift; sourceTree = "<group>"; };
+		2E76A3482EA0E6A800FB1E2D /* PerInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerInfoViewModel.swift; sourceTree = "<group>"; };
+		2E76A34B2EA0EA0800FB1E2D /* PerInfoFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerInfoFooterView.swift; sourceTree = "<group>"; };
+		2E76A34D2EA0FDD400FB1E2D /* DanGeXuanZeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanGeXuanZeView.swift; sourceTree = "<group>"; };
+		2E76A34F2EA1F48F00FB1E2D /* AddressCictSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCictSelectView.swift; sourceTree = "<group>"; };
+		2E76A3512EA2027300FB1E2D /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		2E76A3532EA231D600FB1E2D /* UIComponent+QuickCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIComponent+QuickCreate.swift"; sourceTree = "<group>"; };
+		2E76A3552EA23C6600FB1E2D /* Untitled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Untitled.swift; sourceTree = "<group>"; };
+		2E76A3582EA2476F00FB1E2D /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		2E76A35A2EA331D700FB1E2D /* NetMangerTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetMangerTool.swift; sourceTree = "<group>"; };
 		744CF1E1497B8931DA23F074 /* Pods-ATMSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATMSwift.debug.xcconfig"; path = "Target Support Files/Pods-ATMSwift/Pods-ATMSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		2E1E5DB72E801B0500199191 /* ATMSwiftTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = ATMSwiftTests;
 			sourceTree = "<group>";
 		};
 		2E1E5DC12E801B0500199191 /* ATMSwiftUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = ATMSwiftUITests;
 			sourceTree = "<group>";
 		};
@@ -322,6 +346,7 @@
 		2E1E5DEE2E802A0700199191 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				2E76A3572EA2474600FB1E2D /* Service */,
 				2E76A2362E86CE2700FB1E2D /* M */,
 				2E76A2332E86CCB700FB1E2D /* VM */,
 				2E76A0BE2E8599AE00FB1E2D /* V */,
@@ -408,6 +433,7 @@
 				2E76A2FD2E896E4D00FB1E2D /* Router.swift */,
 				2E76A3312E9F850900FB1E2D /* PopupAnimator.swift */,
 				2E76A3372E9F99D500FB1E2D /* PhotoLibraryManager.swift */,
+				2E76A3532EA231D600FB1E2D /* UIComponent+QuickCreate.swift */,
 			);
 			path = "Common(公共资源)";
 			sourceTree = "<group>";
@@ -415,10 +441,12 @@
 		2E76A20F2E865F5A00FB1E2D /* Net */ = {
 			isa = PBXGroup;
 			children = (
+				2E76A3552EA23C6600FB1E2D /* Untitled.swift */,
 				2E76A2202E868B9600FB1E2D /* ResponseModel.swift */,
 				2E76A21C2E86654100FB1E2D /* NetworkManager.swift */,
 				2E76A2222E868CC100FB1E2D /* API.swift */,
 				2E76A2242E869F0C00FB1E2D /* CommonParamsPlugin.swift */,
+				2E76A35A2EA331D700FB1E2D /* NetMangerTool.swift */,
 			);
 			path = Net;
 			sourceTree = "<group>";
@@ -539,6 +567,8 @@
 			isa = PBXGroup;
 			children = (
 				2E76A3192E8B7AFE00FB1E2D /* VerIDModel.swift */,
+				2E76A3462EA0E52700FB1E2D /* PerInfoModel.swift */,
+				2E76A3512EA2027300FB1E2D /* CityModel.swift */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -547,6 +577,7 @@
 			isa = PBXGroup;
 			children = (
 				2E76A31C2E8B7BFA00FB1E2D /* RZViewModel.swift */,
+				2E76A3482EA0E6A800FB1E2D /* PerInfoViewModel.swift */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -554,6 +585,7 @@
 		2E76A31E2E8EAADB00FB1E2D /* V */ = {
 			isa = PBXGroup;
 			children = (
+				2E76A34A2EA0E9F300FB1E2D /* PerInfo */,
 				2E76A3212E8EAAFA00FB1E2D /* NextStepButton.swift */,
 				2E76A3272E9D0E0400FB1E2D /* KYCCellView.swift */,
 				2E76A3292E9DE49600FB1E2D /* KYCView.swift */,
@@ -565,6 +597,24 @@
 				2E76A33B2EA09BC300FB1E2D /* CancelLogouView.swift */,
 			);
 			path = V;
+			sourceTree = "<group>";
+		};
+		2E76A34A2EA0E9F300FB1E2D /* PerInfo */ = {
+			isa = PBXGroup;
+			children = (
+				2E76A34B2EA0EA0800FB1E2D /* PerInfoFooterView.swift */,
+				2E76A34D2EA0FDD400FB1E2D /* DanGeXuanZeView.swift */,
+				2E76A34F2EA1F48F00FB1E2D /* AddressCictSelectView.swift */,
+			);
+			path = PerInfo;
+			sourceTree = "<group>";
+		};
+		2E76A3572EA2474600FB1E2D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2E76A3582EA2476F00FB1E2D /* HomeService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		3D50BED0EC19D85F39939356 /* Pods */ = {
@@ -743,13 +793,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ATMSwift/Pods-ATMSwift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ATMSwift/Pods-ATMSwift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -781,38 +827,48 @@
 				2E76A33A2E9FE94500FB1E2D /* IDCardFinishView.swift in Sources */,
 				2E76A30D2E8B71EF00FB1E2D /* FaceViewController.swift in Sources */,
 				2E76A32C2E9DF8A100FB1E2D /* RZStepView.swift in Sources */,
+				2E76A3592EA2476F00FB1E2D /* HomeService.swift in Sources */,
 				2E1E60842E80EA9200199191 /* HomeHeadView.swift in Sources */,
 				2E76A3172E8B724000FB1E2D /* BankViewController.swift in Sources */,
+				2E76A3522EA2027300FB1E2D /* CityModel.swift in Sources */,
 				2E76A24B2E8791A800FB1E2D /* MineHeadView.swift in Sources */,
 				2E76A2542E88189800FB1E2D /* OrderTableViewCell.swift in Sources */,
+				2E76A3472EA0E52700FB1E2D /* PerInfoModel.swift in Sources */,
 				2E1E607D2E80316600199191 /* UIView+Category.swift in Sources */,
 				2E76A22D2E86C85900FB1E2D /* ToolManager.swift in Sources */,
 				2E76A3112E8B721200FB1E2D /* PerInfoViewController.swift in Sources */,
 				2E1E5DED2E80294A00199191 /* CustomNavigationController.swift in Sources */,
+				2E76A35B2EA331D700FB1E2D /* NetMangerTool.swift in Sources */,
 				2E76A2292E86B5E900FB1E2D /* PhoneNumberTextField.swift in Sources */,
 				2E76A2F22E891B7000FB1E2D /* ProductDetailHeadView.swift in Sources */,
 				2E76A2402E878AB900FB1E2D /* HomeFootView.swift in Sources */,
 				2E1E5DEB2E80289000199191 /* BaseViewController.swift in Sources */,
 				2E76A30F2E8B720200FB1E2D /* VerifyIDFinishViewController.swift in Sources */,
 				2E76A2F62E89621600FB1E2D /* ProductHeaderSectionView.swift in Sources */,
+				2E76A34E2EA0FDD400FB1E2D /* DanGeXuanZeView.swift in Sources */,
 				2E76A2482E878F4C00FB1E2D /* CustomBaseTableViewController.swift in Sources */,
+				2E76A3562EA23C6800FB1E2D /* Untitled.swift in Sources */,
 				2E76A31A2E8B7AFE00FB1E2D /* VerIDModel.swift in Sources */,
 				2E76A2272E86B25300FB1E2D /* LoginViewModel.swift in Sources */,
 				2E76A32A2E9DE49600FB1E2D /* KYCView.swift in Sources */,
 				2E76A2022E863D9200FB1E2D /* LoginViewController.swift in Sources */,
 				2E1E60822E80EA0900199191 /* HomeTableViewCell.swift in Sources */,
 				2E76A3282E9D0E0400FB1E2D /* KYCCellView.swift in Sources */,
+				2E76A3492EA0E6A800FB1E2D /* PerInfoViewModel.swift in Sources */,
 				2E1E60732E8030F100199191 /* ColorMacros.swift in Sources */,
 				2E76A2252E869F0C00FB1E2D /* CommonParamsPlugin.swift in Sources */,
 				2E76A33C2EA09BC300FB1E2D /* CancelLogouView.swift in Sources */,
 				2E76A3222E8EAAFA00FB1E2D /* NextStepButton.swift in Sources */,
+				2E76A3542EA231D600FB1E2D /* UIComponent+QuickCreate.swift in Sources */,
 				2E76A2EF2E88E69300FB1E2D /* ProductDetailViewController.swift in Sources */,
 				2E76A3342E9F894400FB1E2D /* PhoneBoxView.swift in Sources */,
 				2E76A3302E9E4F3F00FB1E2D /* CustomAlertView.swift in Sources */,
 				2E76A2FC2E8966BC00FB1E2D /* ProductModelView.swift in Sources */,
+				2E76A3502EA1F48F00FB1E2D /* AddressCictSelectView.swift in Sources */,
 				2E76A3242E9D031500FB1E2D /* VerIDViewController.swift in Sources */,
 				2E1E60742E8030F100199191 /* DimensMacros.swift in Sources */,
 				2E1E60752E8030F100199191 /* importPod.swift in Sources */,
+				2E76A34C2EA0EA0800FB1E2D /* PerInfoFooterView.swift in Sources */,
 				2E76A2042E863E2A00FB1E2D /* LoginHeadView.swift in Sources */,
 				2E76A2FE2E896E4D00FB1E2D /* Router.swift in Sources */,
 				2E76A3062E8A334D00FB1E2D /* WebPageViewController.swift in Sources */,

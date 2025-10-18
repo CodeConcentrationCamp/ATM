@@ -13,6 +13,8 @@ class PhotoLibraryManager: NSObject {
     static let shared = PhotoLibraryManager()
     private override init() {}
     
+    var state:Bool = false
+    
     // 图片选择完成的回调
     private var completion: ((UIImage?) -> Void)?
     
@@ -29,9 +31,11 @@ class PhotoLibraryManager: NSObject {
                     self?.presentImagePicker(from: vc, sourceType: .photoLibrary)
                 case .denied, .restricted:
                     // 未授权，提示用户去设置开启
-                    self?.showPermissionAlert(from: vc)
+                    self?.showPermissionAlert(from: vc,state: false)
                 case .notDetermined:
                     // 首次请求权限（系统会自动弹窗）
+                    break
+                case .limited:
                     break
                 @unknown default:
                     break
@@ -41,16 +45,16 @@ class PhotoLibraryManager: NSObject {
     }
     
     // 打开相机（可选，如需拍照功能）
-    func openCamera(from vc: UIViewController, completion: @escaping (UIImage?) -> Void) {
+    func openCamera(from vc: UIViewController,state:Bool = false ,completion: @escaping (UIImage?) -> Void) {
         self.completion = completion
-        
+        self.state = state
         // 检查相机权限
         AVCaptureDevice.requestAccess(for: .video) { [weak self] granted in
             DispatchQueue.main.async {
                 if granted {
                     self?.presentImagePicker(from: vc, sourceType: .camera)
                 } else {
-                    self?.showPermissionAlert(from: vc)
+                    self?.showPermissionAlert(from: vc,state: true)
                 }
             }
         }
@@ -66,15 +70,49 @@ class PhotoLibraryManager: NSObject {
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = sourceType
         imagePicker.delegate = self
-        imagePicker.allowsEditing = false // 允许编辑图片（裁剪等）
-        vc.present(imagePicker, animated: true)
+        imagePicker.allowsEditing = false // 是否允许编辑图片（裁剪等）
+        imagePicker.cameraDevice =  state ? .front : .rear
+        
+        
+        vc.present(imagePicker, animated: true) {
+            if self.state{
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
+                    self.findFlipButtons(in: imagePicker.view)
+                }
+            }
+        }
     }
     
+    func findFlipButtons(in view: UIView) {
+        for subview in view.subviews {
+            // 查找 CAMFlipButton 类型的视图并隐藏
+            if subview.isKind(of: NSClassFromString("CAMFlipButton")!) {
+                subview.isHidden = true
+                return
+            }
+            
+            // 查找 SwiftUI._UIGraphicsView 类型且符合尺寸和位置条件的视图并隐藏
+            if subview.isKind(of: NSClassFromString("SwiftUI._UIGraphicsView")!) {
+                let screenWidth = UIScreen.main.bounds.width
+                if subview.frame.width == 48,
+                   subview.frame.height == 48,
+                   subview.frame.origin.x > screenWidth * 0.5 {
+                    subview.isHidden = true
+                }
+                return
+            }
+            
+            // 递归查找子视图
+            findFlipButtons(in: subview)
+        }
+    }
+    
+    
     // 权限不足时显示提示弹窗
-    private func showPermissionAlert(from vc: UIViewController) {
+    private func showPermissionAlert(from vc: UIViewController,state:Bool) {
         let alert = UIAlertController(
             title: "权限不足",
-            message: "请在设置中允许访问相册",
+            message: state ? "请在设置中允许访问相机" : "请在设置中允许访问相册",
             preferredStyle: .alert
         )
         alert.addAction(UIAlertAction(title: "取消", style: .cancel))

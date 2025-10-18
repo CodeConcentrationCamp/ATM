@@ -25,12 +25,20 @@ enum API {
     case getUserInfo(proID:String)
     //保存用户身份证信息（第一项）
     case saveUserInfo(proID:String,subsided:String,excitement:String,slice:String,church:String)
+    
+    //获取用户信息（第二项)
+    case getUserInfo2(proID:String)
+    
+    
+    
     //订单ID 获取URL
     case orderIDGetUrl(westwards:String)
     
-    //相册
+    //相册,相机
     case uploadAvatar(imageData: Data, reflection: String,says: String,lamps: String,church: String,submit :String,ruling: String = "")
     
+    //获取城市
+    case getAdress
     
     //退出Out
     case outLogin
@@ -66,15 +74,20 @@ extension API: TargetType{
             return "/miles/apartthe"
         case .outLogin:
             return "/miles/flats"
+        case .getUserInfo2:
+            return "/miles/entered"
+        case .getAdress:
+            return "/miles/sidehe"
         }
     }
     
     var method: Moya.Method {
         switch self{
-        case .getLoginCode,.goLogin,.orderDetail,.productDetail,.clickProduct,.orderIDGetUrl,        .uploadAvatar,.saveUserInfo:
+        case .getLoginCode,.goLogin,.orderDetail,.productDetail,.clickProduct,.orderIDGetUrl,        .uploadAvatar,.saveUserInfo,.getUserInfo2:
             return .post
-        case .homeDetail,.getUserInfo,.outLogin:
+        case .homeDetail,.getUserInfo,.outLogin,.getAdress:
             return .get
+      
         }
     }
     
@@ -197,6 +210,13 @@ extension API: TargetType{
             ]
             return .requestParameters(parameters: parameters, encoding:URLEncoding.httpBody)
         case .outLogin:
+            return .requestParameters(parameters: [:], encoding:URLEncoding.queryString)
+        case .getUserInfo2(proID: let proID):
+            let parameters = [
+                "says": proID,
+            ]
+            return .requestParameters(parameters: parameters, encoding:URLEncoding.httpBody)
+        case .getAdress:
             return .requestParameters(parameters: [:], encoding:URLEncoding.queryString)
         }
         

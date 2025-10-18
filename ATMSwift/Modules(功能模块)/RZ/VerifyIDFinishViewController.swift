@@ -12,14 +12,14 @@ class VerifyIDFinishViewController: CustomBaseTableViewController {
     var productID:String?
     
     lazy var dayLabel: UILabel = {
-        let dayLabel = UILabel().bb_LabelWithFrame(frame: .zero, text: "", textColor: Default_Black0_Color!, fontSize: 14, textAlignment: .center)
+        let dayLabel = UILabel().bb_LabelWithFrame(frame: .zero, text: "", textColor: Default_Black0_Color, fontSize: 14, textAlignment: .center)
         return dayLabel
     }()
     
     lazy var nameTextFild: UITextField = {
         nameTextFild = UITextField(frame: .zero)
         nameTextFild.font = UIFont.systemFont(ofSize: 14)
-        nameTextFild.textColor = Default_Black3_Color!
+        nameTextFild.textColor = Default_Black3_Color
         nameTextFild.textAlignment = .center
         return nameTextFild
     }()
@@ -27,7 +27,7 @@ class VerifyIDFinishViewController: CustomBaseTableViewController {
     lazy var idTextFild: UITextField = {
         idTextFild = UITextField(frame: .zero)
         idTextFild.font = UIFont.systemFont(ofSize: 14)
-        idTextFild.textColor = Default_Black3_Color!
+        idTextFild.textColor = Default_Black3_Color
         idTextFild.textAlignment = .center
         return idTextFild
     }()
@@ -116,7 +116,7 @@ class VerifyIDFinishViewController: CustomBaseTableViewController {
             make.centerX.equalTo(headView.snp.centerX)
         }
         
-        let cardL = UILabel().bb_LabelWithFrame(frame: .zero, text: "Full Name", textColor: Default_Black3_Color!, fontSize: 14, textAlignment: .center)
+        let cardL = UILabel().bb_LabelWithFrame(frame: .zero, text: "Full Name", textColor: Default_Black3_Color, fontSize: 14, textAlignment: .center)
         cardL.font = UIFont.boldSystemFont(ofSize: 14)
         card1.addSubview(cardL)
         cardL.snp.makeConstraints { make in
@@ -154,7 +154,7 @@ class VerifyIDFinishViewController: CustomBaseTableViewController {
             make.height.equalTo(44)
         }
         
-        let card2L = UILabel().bb_LabelWithFrame(frame: .zero, text: "ID NO.", textColor: Default_Black3_Color!, fontSize: 14, textAlignment: .center)
+        let card2L = UILabel().bb_LabelWithFrame(frame: .zero, text: "ID NO.", textColor: Default_Black3_Color, fontSize: 14, textAlignment: .center)
         card2L.font = UIFont.boldSystemFont(ofSize: 14)
         card2.addSubview(card2L)
         card2L.snp.makeConstraints { make in
@@ -174,7 +174,7 @@ class VerifyIDFinishViewController: CustomBaseTableViewController {
             make.centerX.equalTo(headView.snp.centerX)
         }
         
-        let card3L = UILabel().bb_LabelWithFrame(frame: .zero, text: "Date of Birth", textColor: Default_Black3_Color!, fontSize: 14, textAlignment: .center)
+        let card3L = UILabel().bb_LabelWithFrame(frame: .zero, text: "Date of Birth", textColor: Default_Black3_Color, fontSize: 14, textAlignment: .center)
         card3L.font = UIFont.boldSystemFont(ofSize: 14)
         card3.addSubview(card3L)
         card3L.snp.makeConstraints { make in

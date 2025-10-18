@@ -72,7 +72,7 @@ class KYCCellView: UIView {
             make.centerY.equalTo(topImageView.snp.centerY)
         }
         
-        let tip = UILabel().bb_LabelWithFrame(frame: .zero, text: type == 1 ? "Recommended ID Type": "Other Options", textColor: Default_Black0_Color!, fontSize: 14, textAlignment: .center)
+        let tip = UILabel().bb_LabelWithFrame(frame: .zero, text: type == 1 ? "Recommended ID Type": "Other Options", textColor: Default_Black0_Color, fontSize: 14, textAlignment: .center)
         tip.font = UIFont.boldSystemFont(ofSize: 14)
         topImageView.addSubview(tip)
         tip.snp.makeConstraints { make in

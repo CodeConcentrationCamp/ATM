@@ -31,7 +31,7 @@ class VerIDViewController: CustomBaseTableViewController {
     lazy var nextStepButton: NextStepButton = {
         let nextStepButton = NextStepButton(frame: CGRect(x: 15, y:  KScreenHeight - 80 , width: KScreenWidth - 30, height: 50))
         nextStepButton.setClickHandler { [self] in
-            
+            addButtonClick()
         }
         return nextStepButton
     }()
@@ -45,8 +45,8 @@ class VerIDViewController: CustomBaseTableViewController {
         return addButton
     }()
     
+    
     @objc func addButtonClick(){
-        let viewModel = RZViewModel()
         let phoneBox = PhoneBoxView(frame: CGRectMake(0, 0, KScreenWidth, 209+50)) { customView in
             self.reflection = "1"
             PopupAnimator.shared.dismiss(view: customView)
@@ -54,32 +54,16 @@ class VerIDViewController: CustomBaseTableViewController {
                 if image == nil{
                     return
                 }
-                viewModel.getKYCVerID(image: image!, reflection: self!.reflection, says: self!.productID, lamps: "11", church: self!.selectTitle, submit: "1")
-                viewModel.upDataBlock = { state, mm in
-                    if state == "success"{
-                        let finishView = IDCardFinishView(frame: CGRectMake(0, 0, KScreenWidth, KScreenHeight), name: mm?.subsided, num: mm?.excitement ,data: mm?.slice) { customView in
-                            PopupAnimator.shared.dismiss(view: customView)
-                        } commitHandler:{ customView in
-                            viewModel.saveUserInfo(withId: self?.productID ?? "", subsided: (mm?.subsided)!, excitement: mm?.excitement ?? "", slice: mm?.slice ?? "", church: self?.selectTitle ?? "") { isSuccess, msg in
-                                if isSuccess{
-                                    PopupAnimator.shared.dismiss(view: customView)
-                                    let vc = FaceViewController()
-                                    vc.productID = self?.productID
-                                    vc.titleString = self?.selectTitle
-                                    self?.navigationController?.pushViewController(vc, animated: true)
-                                }else{
-                                    ShowTip.showMessage(msg)
-                                }
-                            }
-                        }
-                        PopupAnimator.shared.present(
-                            view: finishView,
-                            type: .fromCenter){}
-                    }
-                }
+                self!.takePhone(image: image!)
             }
         } cameraHandler: { customView in
             self.reflection = "2"
+            PhotoLibraryManager.shared.openCamera(from: self) { [weak self] image in
+                if image == nil{
+                    return
+                }
+                self!.takePhone(image: image!)
+            }
             PopupAnimator.shared.dismiss(view: customView)
         } closaHandler: { customView in
             PopupAnimator.shared.dismiss(view: customView)
@@ -121,5 +105,35 @@ class VerIDViewController: CustomBaseTableViewController {
         self.view .addSubview(nextStepButton)
         
     }
+    
+    // 上传图片
+    func takePhone(image:UIImage?){
+        let viewModel = RZViewModel()
+        
+        viewModel.getKYCVerID(image: image!, reflection: self.reflection, says: self.productID, lamps: "11", church: self.selectTitle, submit: "1")
+        viewModel.upDataBlock = { state, mm in
+            if state == "success"{
+                let finishView = IDCardFinishView(frame: CGRectMake(0, 0, KScreenWidth, KScreenHeight), name: mm?.subsided, num: mm?.excitement ,data: mm?.slice) { customView in
+                    PopupAnimator.shared.dismiss(view: customView)
+                } commitHandler: { customView, name, num, dateBirth in
+                    viewModel.saveUserInfo(withId: self.productID, subsided: name ?? "", excitement: num ?? "", slice: dateBirth ?? "", church: self.selectTitle) { isSuccess, msg in
+                        if isSuccess{
+                            PopupAnimator.shared.dismiss(view: customView)
+                            let vc = FaceViewController()
+                            vc.productID = self.productID
+                            vc.selectTitle = self.selectTitle
+                            self.navigationController?.pushViewController(vc, animated: true)
+                        }else{
+                            ShowTip.showMessage(msg)
+                        }
+                    }
+                }
+                PopupAnimator.shared.present(
+                    view: finishView,
+                    type: .fromCenter){}
+            }
+        }
+    }
+
     
 }

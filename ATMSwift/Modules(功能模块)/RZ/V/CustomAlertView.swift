@@ -24,7 +24,7 @@ class CustomAlertView: UIView {
         btn.setTitle("Photo Album", for: .normal)
         btn.setImage(UIImage(named: "rz31"), for: .normal)
         btn.setBackgroundImage(UIImage(named: "rz30"), for: .normal)
-        btn.setTitleColor(Default_Black0_Color!, for: .normal)
+        btn.setTitleColor(Default_Black0_Color, for: .normal)
         btn.setImagePosition(.left, spacing: 5)
         return btn
     }()
@@ -34,7 +34,7 @@ class CustomAlertView: UIView {
         btn.setTitle("Photograph", for: .normal)
         btn.setImage(UIImage(named: "rz32"), for: .normal)
         btn.setBackgroundImage(UIImage(named: "rz30"), for: .normal)
-        btn.setTitleColor(Default_Black0_Color!, for: .normal)
+        btn.setTitleColor(Default_Black0_Color, for: .normal)
         btn.setImagePosition(.left, spacing: 5)
 
         return btn

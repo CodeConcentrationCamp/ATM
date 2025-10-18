@@ -9,5 +9,7 @@
 	</dict>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>需要访问相册以选择图片</string>
+	<key>NSCameraUsageDescription</key>
+	<string>我们需要使用您的相机来拍摄照片</string>
 </dict>
 </plist>

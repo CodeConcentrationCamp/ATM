@@ -105,7 +105,7 @@ class OrderTableViewCell: BaseTableViewCell {
     }()
     
     lazy var money: UILabel = {
-        let money = UILabel().bb_LabelWithFrame(frame: .zero, text: "93000", textColor: Default_Black0_Color!, fontSize: 20, textAlignment: .left)
+        let money = UILabel().bb_LabelWithFrame(frame: .zero, text: "93000", textColor: Default_Black0_Color, fontSize: 20, textAlignment: .left)
         money.font = UIFont.boldSystemFont(ofSize: 20)
         return money
     }()
@@ -123,9 +123,9 @@ class OrderTableViewCell: BaseTableViewCell {
     lazy var tipBtn: UIButton = {
         let tipBtn = UIButton(frame: .zero)
         tipBtn.setTitle("Loan Gabay", for: .normal)
-        tipBtn.setTitleColor(Default_Black0_Color!, for: .normal)
+        tipBtn.setTitleColor(Default_Black0_Color, for: .normal)
         tipBtn.cornerRadius = 13
-        tipBtn.layer.borderColor = Default_Black3_Color!.cgColor
+        tipBtn.layer.borderColor = Default_Black3_Color.cgColor
         tipBtn.layer.borderWidth = 1
         tipBtn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 13)
         return tipBtn
@@ -154,7 +154,7 @@ class OrderTableViewCell: BaseTableViewCell {
             make.left.equalTo(picImageView.snp.right).offset(12)
         }
         
-        let moneyLabel = UILabel().bb_LabelWithFrame(frame: .zero, text: "Loan amount(₱)", textColor: Default_Black0_Color!, fontSize: 12, textAlignment: .left)
+        let moneyLabel = UILabel().bb_LabelWithFrame(frame: .zero, text: "Loan amount(₱)", textColor: Default_Black0_Color, fontSize: 12, textAlignment: .left)
         bgImageView.addSubview(moneyLabel)
         moneyLabel.snp.makeConstraints { make in
             make.left.equalTo(picImageView.snp.right).offset(12)

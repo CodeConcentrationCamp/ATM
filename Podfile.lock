@@ -2,10 +2,13 @@ PODS:
   - Alamofire (5.9.1)
   - FSPagerView (0.8.3)
   - HandyJSON (5.0.2)
+  - IQKeyboardManager (6.5.19)
   - Kingfisher (7.12.0)
   - MBProgressHUD (1.2.0)
   - Moya (15.0.0):
     - Moya/Core (= 15.0.0)
+  - Moya/Combine (15.0.0):
+    - Moya/Core
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
   - ObjectMapper (4.4.2)
@@ -15,9 +18,11 @@ PODS:
 DEPENDENCIES:
   - FSPagerView
   - HandyJSON
+  - IQKeyboardManager
   - Kingfisher
   - MBProgressHUD
   - Moya
+  - Moya/Combine
   - ObjectMapper
   - SnapKit
   - SwiftyJSON
@@ -27,6 +32,7 @@ SPEC REPOS:
     - Alamofire
     - FSPagerView
     - HandyJSON
+    - IQKeyboardManager
     - Kingfisher
     - MBProgressHUD
     - Moya
@@ -38,6 +44,7 @@ SPEC CHECKSUMS:
   Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
   FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
   Kingfisher: 53a10ea35051a436b5fb626ca2dd8f3144d755e9
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
@@ -45,6 +52,6 @@ SPEC CHECKSUMS:
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
   SwiftyJSON: f5b1bf1cd8dd53cd25887ac0eabcfd92301c6a5a
 
-PODFILE CHECKSUM: f8ef6548f7b9fd80df187eb52456fe1a7fb9f377
+PODFILE CHECKSUM: 9642dd55ee720fd539273877dd3242b2978036d7
 
 COCOAPODS: 1.16.2

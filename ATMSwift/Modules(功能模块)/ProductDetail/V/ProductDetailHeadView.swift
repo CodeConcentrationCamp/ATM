@@ -37,13 +37,13 @@ class ProductDetailHeadView: UIView {
     }()
     
     lazy var money: UILabel = {
-        let money = UILabel().bb_LabelWithFrame(frame: .zero, text: "999999", textColor: Default_Black0_Color!, fontSize: 28, textAlignment: .left)
+        let money = UILabel().bb_LabelWithFrame(frame: .zero, text: "999999", textColor: Default_Black0_Color, fontSize: 28, textAlignment: .left)
         money.font = UIFont.boldSystemFont(ofSize: 28)
         return money
     }()
     
     lazy var moneyLabel: UILabel = {
-        let moneyLabel = UILabel().bb_LabelWithFrame(frame: .zero, text: "Loan amount", textColor: Default_Black0_Color!, fontSize: 14, textAlignment: .left)
+        let moneyLabel = UILabel().bb_LabelWithFrame(frame: .zero, text: "Loan amount", textColor: Default_Black0_Color, fontSize: 14, textAlignment: .left)
         return moneyLabel
     }()
     
@@ -54,7 +54,7 @@ class ProductDetailHeadView: UIView {
     }()
     
     lazy var rate: UILabel = {
-        let rate = UILabel().bb_LabelWithFrame(frame: .zero, text: "", textColor: Default_Black0_Color!, fontSize: 14, textAlignment: .center)
+        let rate = UILabel().bb_LabelWithFrame(frame: .zero, text: "", textColor: Default_Black0_Color, fontSize: 14, textAlignment: .center)
         return rate
     }()
     
@@ -70,7 +70,7 @@ class ProductDetailHeadView: UIView {
     }()
     
     lazy var day: UILabel = {
-        let day = UILabel().bb_LabelWithFrame(frame: .zero, text: "", textColor: Default_Black0_Color!, fontSize: 14, textAlignment: .center)
+        let day = UILabel().bb_LabelWithFrame(frame: .zero, text: "", textColor: Default_Black0_Color, fontSize: 14, textAlignment: .center)
         return day
     }()
     

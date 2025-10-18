@@ -7,6 +7,9 @@ target 'ATMSwift' do
 
   # Pods for ATMSwift
   
+  #键盘
+  pod 'IQKeyboardManager'
+  
   #轮播图
   pod 'FSPagerView'
   #布局
@@ -15,6 +18,8 @@ target 'ATMSwift' do
   
   # 网络情求
   pod 'Moya'
+  pod 'Moya/Combine'
+  
   # model -- 数据解析、转换
   pod 'HandyJSON'
   pod 'SwiftyJSON'

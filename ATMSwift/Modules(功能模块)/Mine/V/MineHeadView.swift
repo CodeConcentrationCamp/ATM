@@ -62,7 +62,7 @@ class MineHeadView: UIView {
 
     lazy var numLabel: UILabel = {
         let numValue = ToolManager.shared.getData(forKey: "PhoneNum") as! String
-        let numLabel = UILabel().bb_LabelWithFrame(frame: .zero, text:ToolManager.shared.maskMiddleFourDigits(numValue), textColor: Default_Black0_Color!, fontSize: 20, textAlignment: .left)
+        let numLabel = UILabel().bb_LabelWithFrame(frame: .zero, text:ToolManager.shared.maskMiddleFourDigits(numValue), textColor: Default_Black0_Color, fontSize: 20, textAlignment: .left)
         numLabel.font = UIFont.boldSystemFont(ofSize: 20)
         return numLabel
     }()

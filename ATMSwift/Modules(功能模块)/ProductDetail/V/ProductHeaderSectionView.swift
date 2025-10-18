@@ -14,7 +14,7 @@ class ProductHeaderSectionView: UIView {
     
     lazy var cellBgView: UIView = {
         
-        let cellBgView = UIView().bb_ViewWithFrame(frame: CGRect(x: 0, y: 0, width: KScreenWidth, height: 0), backgroundColor: Default_BackGround_Color!)
+        let cellBgView = UIView().bb_ViewWithFrame(frame: CGRect(x: 0, y: 0, width: KScreenWidth, height: 0), backgroundColor: Default_BackGround_Color)
         cellBgView.cornerRadius = 8;
         cellBgView.layer.borderColor = UIColorFromHex("0X1C1F1F")!.cgColor
         cellBgView.layer.borderWidth = 1

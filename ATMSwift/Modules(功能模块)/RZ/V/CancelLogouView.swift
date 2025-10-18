@@ -14,6 +14,7 @@ class CancelLogouView: UIView {
     //left Button
     var leftHander: ((_ customView:CancelLogouView) -> Void)?
     
+    var currType:Int = 0
     
       private lazy var imageView: UIImageView = {
         let imageView = UIImageView(frame: .zero)
@@ -30,7 +31,7 @@ class CancelLogouView: UIView {
     
     private lazy var topImageView: UIImageView = {
         let topImageView = UIImageView(frame: .zero)
-        topImageView.tintColor = Default_BackGround_Color!
+        topImageView.tintColor = Default_BackGround_Color
         return topImageView
     }()
     
@@ -77,7 +78,16 @@ class CancelLogouView: UIView {
     
     
     @objc func logOutBtnClick(){
-        self.leftHander?(self)
+        if currType == 1{
+            if self.isSelect{
+                self.leftHander?(self)
+            }else{
+                ShowTip.showMessage("Please read the above content carefully and check the box")
+            }
+        }else{
+            self.leftHander?(self)
+        }
+
     }
     
     lazy var cancelBtn: UIButton = {
@@ -99,7 +109,8 @@ class CancelLogouView: UIView {
         super.init(frame: frame)
         self.cancelHander = cancelHander
         self.leftHander = leftHander
-        let imageString = (type==0 || type == 2) ? "tc_tc_bg" : "zx_tc_bg"
+        currType = type
+        let imageString = (type == 0 || type == 2) ? "tc_tc_bg" : "zx_tc_bg"
         imageView.image = UIImage(named: imageString)
         self.addSubview(imageView)
         imageView.snp.makeConstraints { make in
@@ -163,7 +174,8 @@ class CancelLogouView: UIView {
         if type == 1{
             imageView.addSubview(tipButton)
             tipButton.snp.makeConstraints { make in
-                make.left.equalTo(tipLabel.snp.left)
+                make.left.equalTo(40)
+                make.width.equalTo(230)
                 make.top.equalTo(200)
             }
         }
@@ -195,11 +207,6 @@ class CancelLogouView: UIView {
             make.right.equalTo(-42)
             make.centerY.equalTo(logOutBtn.snp.centerY)
         }
-        
-        
-        
-        
-        
     }
     
     @objc private func closeTapped() {

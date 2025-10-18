@@ -10,6 +10,8 @@ import FSPagerView
 
 class HomeFootView: UIView {
     
+    let dataArr =  ["home12","home13","home14"]
+    
     lazy var pagerView : FSPagerView = {
         let pagerView = FSPagerView(frame: CGRect(x: 15, y: 48, width: self.width - 60, height: 200))
         pagerView.delegate = self
@@ -21,8 +23,6 @@ class HomeFootView: UIView {
         pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "FLBannerCell")
         return pagerView
     }()
-    
-    let dataArr =  ["home12","home13","home14"]
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,7 +42,6 @@ class HomeFootView: UIView {
         let footBoomImageView = UIImageView(frame:CGRect(x: 15, y: 441, width: KScreenWidth - 30, height: 225))
         footBoomImageView.image = UIImage(named: "home10")
         self.addSubview(footBoomImageView)
-        
     }
     
     required init?(coder: NSCoder) {
@@ -50,7 +49,6 @@ class HomeFootView: UIView {
     }
     
 }
-
 
 extension HomeFootView: FSPagerViewDelegate, FSPagerViewDataSource {
     func numberOfItems(in pagerView: FSPagerView) -> Int {

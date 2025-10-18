@@ -28,7 +28,7 @@ class ProductCell: UIView {
     }()
     
     lazy var nameLabel: UILabel = {
-        let nameLabel = UILabel().bb_LabelWithFrame(frame: .zero, text: "", textColor: Default_Black0_Color!, fontSize: 16, textAlignment: .left)
+        let nameLabel = UILabel().bb_LabelWithFrame(frame: .zero, text: "", textColor: Default_Black0_Color, fontSize: 16, textAlignment: .left)
         return nameLabel
     }()
     

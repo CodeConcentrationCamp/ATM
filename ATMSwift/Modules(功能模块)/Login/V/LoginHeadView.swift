@@ -9,6 +9,15 @@ import UIKit
 
 class LoginHeadView: UIView {
     
+    // MARK: - lazy
+    lazy var bgView: UIView = {
+        let bgView = UIView.quickCreate(frame: CGRectMake(0, 0, self.width, self.height), bgColor: .clear)
+        return bgView
+    }()
+
+    
+    
+    
     
     var isGXXY: Bool = true
     
@@ -17,10 +26,7 @@ class LoginHeadView: UIView {
         initUI()
     }
     
-    lazy var bgView: UIView = {
-        let bgView = UIView().bb_ViewWithFrame(frame: CGRect(x: 0, y: 0, width: self.width, height: self.height), backgroundColor: UIColor.clear)
-        return bgView
-    }()
+    
     
     lazy var logoImageView: UIImageView = {
         let logoImageView = UIImageView(frame:CGRectZero)
@@ -117,7 +123,7 @@ class LoginHeadView: UIView {
     lazy var accountTextFiled: PhoneNumberTextField = {
         let accountTextFiled = PhoneNumberTextField(frame: .zero)
         accountTextFiled.font = UIFont.systemFont(ofSize: 15)
-        accountTextFiled.textColor = Default_Black0_Color!
+        accountTextFiled.textColor = Default_Black0_Color
         let attributes: [NSAttributedString.Key: Any] = [
             .foregroundColor:UIColorFromHex("0xA29B91")!,
             // 可选：添加字体设置
@@ -127,7 +133,7 @@ class LoginHeadView: UIView {
         let placeholder = NSAttributedString(string: "Cellphone number", attributes: attributes)
         accountTextFiled.attributedPlaceholder = placeholder
         accountTextFiled.addTarget(self, action:#selector(textFieldChangeMethod) , for: .editingChanged)
-        let numLabel = UILabel().bb_LabelWithFrame(frame: CGRectZero, text: "+63  ", textColor: Default_Black0_Color!, fontSize: 14, textAlignment: .left)
+        let numLabel = UILabel().bb_LabelWithFrame(frame: CGRectZero, text: "+63  ", textColor: Default_Black0_Color, fontSize: 14, textAlignment: .left)
         numLabel.font = UIFont.boldSystemFont(ofSize: 14)
         accountTextFiled.leftView = numLabel
         accountTextFiled.leftViewMode = .always
@@ -137,7 +143,7 @@ class LoginHeadView: UIView {
     lazy var codeTextFiled: UITextField = {
         let codeTextFiled = UITextField(frame: .zero)
         codeTextFiled.font = UIFont.systemFont(ofSize: 15)
-        codeTextFiled.textColor = Default_Black0_Color!
+        codeTextFiled.textColor = Default_Black0_Color
         let attributes: [NSAttributedString.Key: Any] = [
             .foregroundColor:UIColorFromHex("0xA29B91")!,
             // 可选：添加字体设置
@@ -163,7 +169,6 @@ class LoginHeadView: UIView {
     }()
     
     func initUI(){
-        
         self.addSubview(bgView)
         bgView.addSubview(logoImageView)
         logoImageView.snp.makeConstraints { make in
